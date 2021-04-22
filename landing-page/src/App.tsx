@@ -39,11 +39,11 @@ function Header() {
       </div>
       <div id="header-utils">
         <div id="header-login">
-          <i></i>
+          <div id="login-img"></div>
           <div>로그인</div>
         </div>
         <div id="header-join">
-          <i></i>
+          <div id="join-img"></div>
           <div>회원가입</div>
         </div>
         <div id="header-languages">
@@ -64,7 +64,20 @@ function Header() {
 }
 
 function SideBar() {
-  return;
+  return (
+    <div id="sideBar">
+      <div id="sideBar-sns">
+        <div className="facebook-account"></div>
+        <div className="instagram-account"></div>
+        <div className="naverBlog-account"></div>
+        <div className="youtube-account"></div>
+      </div>
+      <div id="sideBar-scroll">
+        <div className="sideBar-scroll-text"> Scroll</div>
+        <div id="sideBar-scroll-state"></div>
+      </div>
+    </div>
+  );
 }
 
 function Main() {
@@ -75,7 +88,7 @@ function App() {
   return (
     <>
       <div id="main-wr">
-        {/* <SideBar /> */}
+        <SideBar />
         <Header />
         {/* <Main /> */}
       </div>

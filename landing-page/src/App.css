@@ -1,3 +1,94 @@
+#main-wr {
+  width: 100%;
+  height: 920px;
+}
+
+/* sideBar */
+
+#sideBar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 920px;
+}
+
+#sideBar-sns {
+  position: relative;
+  top: 125px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.facebook-account {
+  width: 23px;
+  height: 23px;
+  background-image: url(./images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: 0px;
+  background-position-x: 0px;
+  margin-bottom: 30px;
+}
+
+.instagram-account {
+  width: 23px;
+  height: 23px;
+  background-image: url(./images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: 0px;
+  background-position-x: -23px;
+  margin-bottom: 30px;
+}
+
+.naverBlog-account {
+  width: 23px;
+  height: 23px;
+  background-image: url(./images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: 0px;
+  background-position-x: -46px;
+  margin-bottom: 30px;
+}
+
+.youtube-account {
+  width: 23px;
+  height: 23px;
+  background-image: url(./images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: 0px;
+  background-position-x: -69px;
+  margin-bottom: 30px;
+}
+
+#sideBar-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 240px;
+}
+
+.sideBar-scroll-text {
+  /* writing-mode: vertical-lr; */
+  position: relative;
+  left: -2px;
+  transform: rotate(-90deg);
+}
+
+#sideBar-scroll-state {
+  position: relative;
+  top: 30px;
+  width: 1px;
+  height: 140px;
+  background: rgba(210, 212, 201, 0.7);
+}
+
+/* header */
+
 #header {
   display: flex;
   padding: 46px 0px 0px 0px;
@@ -16,6 +107,7 @@
   /* flex: 1; */
 }
 
+/* header-menus */
 #header-menus {
   display: flex;
   justify-content: space-between;
@@ -28,6 +120,7 @@
   display: flex;
 }
 
+/* header-utils */
 #header-utils {
   display: flex;
   justify-content: space-between;
@@ -36,8 +129,38 @@
   width: 350px;
 }
 
-#header-account {
+#header-login {
   display: flex;
+}
+
+#login-img {
+  position: relative;
+  top: -2px;
+  left: -10px;
+  /* margin-right: 5px; */
+  width: 26px;
+  height: 26px;
+  background-image: url(./images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: -67px;
+  background-position-x: -196px;
+  /* transition: background-position-y 0s ease 0.5s; */
+}
+
+#header-join {
+  display: flex;
+}
+
+#join-img {
+  position: relative;
+  top: -2px;
+  left: -10px;
+  width: 26px;
+  height: 26px;
+  background-image: url(./images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: -67px;
+  background-position-x: -222px;
 }
 
 #header-language-now {
