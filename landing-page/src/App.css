@@ -325,7 +325,7 @@
   width: 100%;
   height: 390px;
   /* background-color: aquamarine; */
-  padding: 0px 81px 0px 81px;
+  padding: 0px 70px 0px 70px;
   box-sizing: border-box;
 }
 
@@ -340,23 +340,25 @@
   left: 35%;
 }
 
-#notice-head-English-bar {
+.head-English-bar {
   width: 50px;
   height: 1px;
+
   background-color: black;
 }
 
-#notice-head-English-Text {
+.head-English-Text {
   font-size: 14px;
   letter-spacing: 2px;
 }
 
-#notice-head-Title {
+.head-Title {
   margin-top: 20px;
   font-size: 28px;
+  font-weight: 500;
 }
 
-#notice-haed-Subscrition {
+.haed-Subscrition {
   width: 180px;
   height: 41px;
   margin-top: 40px;
@@ -391,17 +393,76 @@
 }
 
 #notice-contents {
+  display: flex;
+  padding: 80px 40px 80px 40px;
+  box-sizing: border-box;
   width: 70%;
   background: #f9fafa;
 }
 
+.content {
+  padding: 0px 0px 0px 40px;
+  box-sizing: border-box;
+}
+
+.content-title {
+  font-size: 18px;
+  width: 310px;
+  height: 50px;
+  color: #333;
+  font-weight: 550;
+  letter-spacing: -0.5px;
+  line-height: 1.6em;
+  word-break: keep-all;
+}
+
+.content-subscrition {
+  margin-top: 15px;
+  width: 310px;
+  color: #666;
+  /* height: 60px; */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
+}
+
+.content-date {
+  position: relative;
+  top: 60px;
+  color: #9a9a9a;
+  font-weight: 300;
+}
 /* container-evetSchedule */
 
-#container-eventSchedule {
+#container-eventScheduleNAlarmZone {
+  display: flex;
   width: 100%;
   height: 417px;
-  background-color: chartreuse;
+  /* background-color: chartreuse; */
+  padding: 0px 70px 0px 70px;
+  box-sizing: border-box;
 }
+
+#eventSchedule {
+  width: 50%;
+  height: 100%;
+}
+
+#eventSchedule-head-introduce {
+  position: relative;
+  top: 80px;
+  left: 20%;
+}
+
+#alarmZone {
+  width: 50%;
+  height: 100%;
+  background: #f6f1f2;
+}
+/* container-magazine */
 
 #container-magazine {
   width: 100%;
