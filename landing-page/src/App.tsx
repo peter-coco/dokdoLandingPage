@@ -127,87 +127,140 @@ function Container() {
   return (
     <div id="container-wrap">
       <div id="container-notice">
-        <div id="notice-head">
-          <div id="notice-head-introduce">
-            <div className="head-English-bar"></div>
-            <div className="head-English-Text">Notice</div>
-            <div className="head-Title">재단소식</div>
-            <div className="haed-Subscrition">
-              독도재단의 이슈와
-              <br />
-              정보를 안내해 드립니다.
-            </div>
-            <div className="head-contents-moreBtn">
-              <div className="moreBtn-horizontal"></div>
-              <div className="moreBtn-vertical"></div>
-            </div>
-          </div>
-          <div id="notice-head-contents-title">
-            <div className="head-content-title head-content-title-active">
-              공지사항
-            </div>
-            <div className="head-content-title">언론 & 홍보</div>
-            <div className="head-content-title">보도자료</div>
-          </div>
-        </div>
-        <div id="notice-contents">
-          <div className="content">
-            <div className="content-title">
-              2021년도 「대학 독도동아리 결성 및 활성화」공고
-            </div>
-            <div className="content-subscrition">
-              (재)독도재단 공고 제2021-10호 2021년도「대학 독도동아리 결성 및
-              활성화」사업 참여 동아리를 모집하오니 많은 지원 바랍니다.
-              감사합니다.
-            </div>
-            <div className="content-date">2021-03-17</div>
-          </div>
-          <div className="content">
-            <div className="content-title">직원 채용시험 최종 합격자 공고</div>
-            <div className="content-subscrition">
-              {" "}
-              재단법인 독도재단 직원채용 공고(제2021-1호)에 따라 실시한 직원
-              채용시험의 최종합격자를 &lt;첨부&gt;와 같이 공고합니다. 많은 지원
-              부탁드립니다.
-            </div>
-            <div className="content-date">2021-02-23</div>
-          </div>
-          <div className="content">
-            <div className="content-title">
-              독도를 상징하는 '도랑'과 '도아' 이모티콘 무료배포!
-            </div>
-            <div className="content-subscrition">
-              안녕하십니까! 독도재단 입니다~ 독도재단에서 10월 '독도의 달'과
-              '도민의 날'을 맞아 독도를 상징하는 '도랑'과 '도아'이모티콘 7종을
-              전달하게 되었습니다.
-            </div>
-            <div className="content-date">2020-10-23</div>
-          </div>
-        </div>
-      </div>
-      <div id="container-eventScheduleNAlarmZone">
-        <div id="eventSchedule">
-          <div id="eventSchedule-head">
-            <div id="eventSchedule-head-introduce">
+        <div id="notice-front"></div>
+        <div id="notice-wrap">
+          <div id="notice-head">
+            <div id="notice-head-introduce">
               <div className="head-English-bar"></div>
-              <div className="head-English-Text">Event</div>
-              <div className="head-Title">행사일정</div>
+              <div className="head-English-Text">Notice</div>
+              <div className="head-Title">재단소식</div>
               <div className="haed-Subscrition">
-                독도의 다양한 행사에
+                독도재단의 이슈와
                 <br />
-                많은 관심 바랍니다.
+                정보를 안내해 드립니다.
               </div>
-              <div className="head-contents-moreBtn">
+              <div id="notice-head-moreBtn">
                 <div className="moreBtn-horizontal"></div>
                 <div className="moreBtn-vertical"></div>
               </div>
             </div>
+            <div id="notice-head-contents-title">
+              <div className="head-content-title head-content-title-active">
+                공지사항
+              </div>
+              <div className="head-content-title">언론 & 홍보</div>
+              <div className="head-content-title">보도자료</div>
+            </div>
+          </div>
+          <div id="notice-contents">
+            <div className="content">
+              <div className="content-title">
+                2021년도 「대학 독도동아리 결성 및 활성화」공고
+              </div>
+              <div className="content-subscrition">
+                (재)독도재단 공고 제2021-10호 2021년도「대학 독도동아리 결성 및
+                활성화」사업 참여 동아리를 모집하오니 많은 지원 바랍니다.
+                감사합니다.
+              </div>
+              <div className="content-date">2021-03-17</div>
+            </div>
+            <div className="content">
+              <div className="content-title">
+                직원 채용시험 최종 합격자 공고
+              </div>
+              <div className="content-subscrition">
+                {" "}
+                재단법인 독도재단 직원채용 공고(제2021-1호)에 따라 실시한 직원
+                채용시험의 최종합격자를 &lt;첨부&gt;와 같이 공고합니다. 많은
+                지원 부탁드립니다.
+              </div>
+              <div className="content-date">2021-02-23</div>
+            </div>
+            <div className="content">
+              <div className="content-title">
+                독도를 상징하는 '도랑'과 '도아' 이모티콘 무료배포!
+              </div>
+              <div className="content-subscrition">
+                안녕하십니까! 독도재단 입니다~ 독도재단에서 10월 '독도의 달'과
+                '도민의 날'을 맞아 독도를 상징하는 '도랑'과 '도아'이모티콘 7종을
+                전달하게 되었습니다.
+              </div>
+              <div className="content-date">2020-10-23</div>
+            </div>
           </div>
         </div>
-        <div id="alarmZone"></div>
+        <div id="notice-tail"></div>
       </div>
-      <div id="container-magazine"></div>
-      <div id="contaienr-logo"></div>
+      <div id="container-eventScheduleNAlarmZone">
+        <div id="eventScheduleNAlarmZone-wrap">
+          <div id="eventSchedule">
+            <div id="eventSchedule-head">
+              <div id="eventSchedule-head-introduce">
+                <div className="head-English-bar"></div>
+                <div className="head-English-Text">Event</div>
+                <div className="head-Title">행사일정</div>
+                <div className="haed-Subscrition">
+                  독도의 다양한 행사에
+                  <br />
+                  많은 관심 바랍니다.
+                </div>
+                <div id="eventSchedule-head-moreBtn">
+                  <div className="moreBtn-horizontal "></div>
+                  <div className="moreBtn-vertical"></div>
+                </div>
+              </div>
+            </div>
+            <div id="eventSchedule-contents">
+              <div className="eventSchedule-content">
+                <div className="eventSchedule-content-date">2021-05-20</div>
+                <div className="eventSchedule-content-subscription">
+                  경남관광박람회
+                  <br />
+                  독도홍보버스운영
+                </div>
+                <div className="eventSchedule-content-moreBtn"></div>
+              </div>
+              <div className="eventSchedule-content">
+                <div className="eventSchedule-content-date">2021-05-21</div>
+                <div className="eventSchedule-content-subscription">
+                  경남관광박람회
+                  <br />
+                  독도홍보버스운영
+                </div>
+                <div className="eventSchedule-content-moreBtn"></div>
+              </div>
+            </div>
+          </div>
+          <div id="alarmZone">
+            <div id="alarmZone-head">
+              <div id="alarmZone-head-introduce">
+                <div className="head-English-bar"></div>
+                <div className="head-English-Text">Banner</div>
+                <div className="head-Title">알림존</div>
+                <div id="alarmZone-head-SlideBtn">
+                  <div className="SlideBtn-prev">
+                    <div className="SlideBtn-prev-img"></div>
+                  </div>
+                  <div className="SlideBtn-next">
+                    <div className="SlideBtn-next-img"></div>
+                  </div>
+                </div>
+              </div>
+              <div id="alarmZone-contents-list"></div>
+            </div>
+          </div>
+        </div>
+        <div id="eventScheduleNAlarmZone-tail"></div>
+      </div>
+      <div id="container-magazine">
+        <div id="magazine-live"></div>
+        <div id="magazine-dokdoMagazine"></div>
+        <div id="magazine-dokdo-load"></div>
+      </div>
+      <div id="contaienr-logo">
+        <div></div>
+        <div></div>
+      </div>
     </div>
   );
 }

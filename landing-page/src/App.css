@@ -315,6 +315,8 @@
 
 #container-wrap {
   width: 100%;
+  padding: 0px 70px 0px 70px;
+  box-sizing: border-box;
   /* height: 1441px; */
   /* background-color: antiquewhite; */
 }
@@ -325,19 +327,45 @@
   width: 100%;
   height: 390px;
   /* background-color: aquamarine; */
-  padding: 0px 70px 0px 70px;
-  box-sizing: border-box;
+  /* padding: 0px 70px 0px 70px; */
+  /* box-sizing: border-box; */
+  position: relative;
+}
+
+#notice-front {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  z-index: -1;
+  background: #f4f4f9;
+}
+
+#notice-tail {
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  right: 0px;
+  z-index: -1;
+  background: #f9fafa;
+}
+
+#notice-wrap {
+  display: flex;
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
 }
 
 #notice-head {
+  position: relative;
+  display: flex;
   width: 30%;
-  background: #f4f4f9;
 }
 
 #notice-head-introduce {
   position: relative;
   top: 80px;
-  left: 35%;
 }
 
 .head-English-bar {
@@ -367,10 +395,34 @@
   color: #8b8b8b;
 }
 
+#notice-head-moreBtn {
+  margin-top: 50px;
+}
+
+#eventSchedule-head-moreBtn {
+  margin-top: 70px;
+}
+
+.moreBtn-horizontal {
+  position: relative;
+  top: 10px;
+  width: 20px;
+  height: 1px;
+  background-color: #8b8b8b;
+}
+
+.moreBtn-vertical {
+  position: relative;
+  left: 10px;
+  width: 1px;
+  height: 20px;
+  background-color: #8b8b8b;
+}
+
 #notice-head-contents-title {
   position: relative;
-  top: -80px;
-  left: 75%;
+  top: 80px;
+  /* right: 30px; */
 
   display: flex;
   flex-direction: column;
@@ -397,7 +449,7 @@
   padding: 80px 40px 80px 40px;
   box-sizing: border-box;
   width: 70%;
-  background: #f9fafa;
+  /* background: #f9fafa; */
 }
 
 .content {
@@ -442,25 +494,126 @@
   width: 100%;
   height: 417px;
   /* background-color: chartreuse; */
-  padding: 0px 70px 0px 70px;
-  box-sizing: border-box;
+  /* padding: 0px 70px 0px 70px; */
+  /* box-sizing: border-box; */
+  position: relative;
+}
+
+#eventScheduleNAlarmZone-wrap {
+  display: flex;
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
 }
 
 #eventSchedule {
+  display: flex;
   width: 50%;
   height: 100%;
+  padding: 65px 65px 65px 0;
+  box-sizing: border-box;
 }
 
-#eventSchedule-head-introduce {
-  position: relative;
-  top: 80px;
-  left: 20%;
+#eventSchedule-contents {
+  display: flex;
+  width: 100%;
 }
+
+#eventScheduleNAlarmZone-tail {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: #f6f1f2;
+  z-index: -1;
+  right: 0;
+  /* margin-right: 70px; */
+}
+
+.eventSchedule-content {
+  /* display: flex; */
+  height: 100%;
+  border: 1px solid #e1e1e1;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-left: 35px;
+  width: 50%;
+  position: relative;
+}
+
+.eventSchedule-content-date {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+  border-right: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 18px;
+  color: #7d7fa2;
+}
+
+.eventSchedule-content-subscription {
+  position: relative;
+  margin-top: 70px;
+  left: 0px;
+  color: #333;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+
+/* alarmZone */
 
 #alarmZone {
   width: 50%;
   height: 100%;
-  background: #f6f1f2;
+  /* background: #f6f1f2; */
+  padding: 65px 0px 65px 65px;
+  box-sizing: border-box;
+}
+
+#alarmZone-head-SlideBtn {
+  display: flex;
+  position: relative;
+  top: 143px;
+  right: 100px;
+}
+
+.SlideBtn-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d84351;
+  width: 100px;
+  height: 66px;
+}
+
+.SlideBtn-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d84351;
+  width: 100px;
+  height: 66px;
+}
+
+.SlideBtn-prev-img {
+  /* margin: auto; */
+  width: 31px;
+  height: 8px;
+  /* background-color: #000; */
+  background: url(./images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: -0px;
+  background-position-x: -244px;
+}
+
+.SlideBtn-next-img {
+  width: 31px;
+  height: 8px;
+  background-image: url(./images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: -8px;
+  background-position-x: -244px;
 }
 /* container-magazine */
 
