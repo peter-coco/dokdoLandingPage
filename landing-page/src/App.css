@@ -335,7 +335,7 @@
 #notice-front {
   position: absolute;
   height: 100%;
-  width: 30%;
+  width: 50%;
   z-index: -1;
   background: #f4f4f9;
 }
@@ -343,7 +343,7 @@
 #notice-tail {
   position: absolute;
   height: 100%;
-  width: 70%;
+  width: 50%;
   right: 0px;
   z-index: -1;
   background: #f9fafa;
@@ -360,7 +360,8 @@
 #notice-head {
   position: relative;
   display: flex;
-  width: 30%;
+  width: 23%;
+  left: 10px;
 }
 
 #notice-head-introduce {
@@ -384,6 +385,7 @@
   margin-top: 20px;
   font-size: 28px;
   font-weight: 500;
+  letter-spacing: -1px;
 }
 
 .haed-Subscrition {
@@ -393,6 +395,7 @@
   font-size: 15px;
   font-weight: 300;
   color: #8b8b8b;
+  letter-spacing: -1px;
 }
 
 #notice-head-moreBtn {
@@ -422,7 +425,7 @@
 #notice-head-contents-title {
   position: relative;
   top: 80px;
-  /* right: 30px; */
+  right: 0px;
 
   display: flex;
   flex-direction: column;
@@ -430,10 +433,14 @@
 
 .head-content-title {
   line-height: 50px;
-  text-align: center;
+  /* text-align: center; */
+
   width: 120px;
   height: 50px;
   margin-bottom: 20px;
+  font-size: 15px;
+  padding-left: 20px;
+  box-sizing: border-box;
   /* background: #41478f; */
 }
 
@@ -449,7 +456,7 @@
   padding: 80px 40px 80px 40px;
   box-sizing: border-box;
   width: 70%;
-  /* background: #f9fafa; */
+  background: #f9fafa;
 }
 
 .content {

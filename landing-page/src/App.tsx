@@ -253,20 +253,118 @@ function Container() {
         <div id="eventScheduleNAlarmZone-tail"></div>
       </div>
       <div id="container-magazine">
-        <div id="magazine-live"></div>
-        <div id="magazine-dokdoMagazine"></div>
-        <div id="magazine-dokdo-load"></div>
+        <div id="magazine-live">
+          <div id="magazine-live-title">
+            <div id="magazine-live-title-img"></div>
+            <div id="magazine-live-title-text"></div>
+          </div>
+          <div id="magazine-live-video-src"></div>
+          <div id="magazine-live-subscription">
+            여기는 독도입니다.
+            <br /> 작은 관심이 독도사랑의 첫 걸음 입니다.
+          </div>
+          <div id="magazine-live-info">
+            <div>느껴보세요!</div>
+            <div>
+              아름다운 독도의 숨결을
+              <br /> 생생하게 전해드립니다.
+              <br />
+              <br />
+              실시간으로 독도에
+              <br /> 사랑의 손길을 보내주세요
+            </div>
+          </div>
+        </div>
+        <div id="magazine-dokdoMagazine">
+          <div id="dokdoMagazine-top">
+            <div className="head-English-bar"></div>
+            <div className="head-English-Text">Event</div>
+            <div className="head-Title">행사일정</div>
+            <div id="dokdoMagazine-head-moreBtn">
+              <div className="moreBtn-horizontal "></div>
+              <div className="moreBtn-vertical"></div>
+            </div>
+          </div>
+          <div id="dokdoMagazine-img"></div>
+          <div id="dokdoMagazine-bottom">
+            <div id="dokdoMagazine-bottom-top">
+              <div id="dokdoMagazine-bottom-top-date">2021.01</div>
+              <div id="dokdoMagazine-bottom-top-arrow"></div>
+              <div id="dokdoMagazine-bottom-top-title">
+                2020 독도로(가을겨울호)
+              </div>
+            </div>
+            <div id="dokdoMagazine-bottom-bottom">
+              <div id="dokdoMagazine-bottom-bottom-EBookBtn">E-book보기</div>
+              <div id="dokdoMagazine-bottom-bottom-askMagazineBtn">
+                매거진신청
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="magazine-dokdo-load">
+          <div id="dokdo-load-top">
+            <div id="dokdo-load-top-head">
+              <div id="dokdo-load-top-head-title">독도 가는 길</div>
+              <div id="dokdo-load-top-head-subscription">
+                아직까지 한 번도 경험하지 못하였다면 독도를 느껴보세요! 입도와
+                교통편을 안내해 드립니다.
+              </div>
+            </div>
+            <div id="dokdo-load-top-island-img"></div>
+            <div id="dokdo-load-top-arrow"></div>
+          </div>
+          <div id="dokdo-load-bottom">
+            <div id="dokdo-load-bottom-contact-title">
+              울릉군 독도관리사무소
+            </div>
+            <div id="dokdo-load-bottom-contact-number">T.054-790-6646</div>
+          </div>
+        </div>
       </div>
-      <div id="contaienr-logo">
-        <div></div>
-        <div></div>
+      <div id="container-logo">
+        <div>
+          <div id="container-logo-prev"></div>
+          <div id="container-logo-playNpause"></div>
+          <div id="container-logo-next"></div>
+        </div>
+        <div id="container-logo-list"></div>
       </div>
     </div>
   );
 }
 
 function Footer() {
-  return <div id="footer-wrap"></div>;
+  return (
+    <div id="footer-wrap">
+      <div>
+        <div>개인정보처리방침</div>
+        <div>이용약관</div>
+        <div>이메일무단수집거부</div>
+        <div>홈페이지불편신고</div>
+        <div>사이트맵</div>
+      </div>
+      <div>
+        <div>
+          <div>우) 37751 경상북도 포항시 북구 중흥로 231 동양빌딩 9층</div>
+          <div>이메일 : dokdo@koreadokdo.or.kr</div>
+          <div>대표번호 : 054-272-6513</div>
+          <div>팩스번호 : 054-272-6515</div>
+        </div>
+        <div>
+          COPYRIGHT 2019. BY 재단법인 독도재단. ALL RIGHTS RESERVED. Design by
+          KOWEB.
+        </div>
+      </div>
+      <div id="footer-gotoTopBtn"></div>
+      <div>
+        <div className="facebook-account"></div>
+        <div className="instagram-account"></div>
+        <div className="naverBlog-account"></div>
+        <div className="youtube-account"></div>
+      </div>
+    </div>
+  );
 }
 
 function App() {
