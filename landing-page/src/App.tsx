@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 
+import banner01 from "./images/banner/img_logo01.gif";
+import banner02 from "./images/banner/img_logo02.gif";
+import banner03 from "./images/banner/img_logo03.gif";
+import banner04 from "./images/banner/img_logo04.gif";
+import banner05 from "./images/banner/img_logo05.gif";
+import banner06 from "./images/banner/img_logo06.gif";
+
 import "./App.css";
 // import video from "./images/videoSample.mp4";
 import { stringify } from "node:querystring";
@@ -319,12 +326,35 @@ function Container() {
         </div>
       </div>
       <div id="container-logo">
-        <div>
-          <div id="container-logo-prev"></div>
-          <div id="container-logo-playNpause"></div>
-          <div id="container-logo-next"></div>
+        <div id="container-logo-wrap">
+          <div id="container-logo-btn">
+            <div id="container-logo-prev"></div>
+            <div id="container-logo-playNpause"></div>
+            <div id="container-logo-next"></div>
+          </div>
+          <div id="container-logo-list">
+            <ul id="container-logo-banner">
+              <li className="banner">
+                <img src={banner01} alt="" />
+              </li>
+              <li className="banner">
+                <img src={banner02} alt="" />
+              </li>
+              <li className="banner">
+                <img src={banner03} alt="" />
+              </li>
+              <li className="banner">
+                <img src={banner04} alt="" />
+              </li>
+              <li className="banner">
+                <img src={banner05} alt="" />
+              </li>
+              <li className="banner">
+                <img src={banner06} alt="" />
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="container-logo-list"></div>
       </div>
     </div>
   );
@@ -332,32 +362,48 @@ function Container() {
 
 function Footer() {
   return (
-    <div id="footer-wrap">
-      <div>
-        <div>개인정보처리방침</div>
-        <div>이용약관</div>
-        <div>이메일무단수집거부</div>
-        <div>홈페이지불편신고</div>
-        <div>사이트맵</div>
-      </div>
-      <div>
-        <div>
-          <div>우) 37751 경상북도 포항시 북구 중흥로 231 동양빌딩 9층</div>
-          <div>이메일 : dokdo@koreadokdo.or.kr</div>
-          <div>대표번호 : 054-272-6513</div>
-          <div>팩스번호 : 054-272-6515</div>
+    <div id="footer">
+      <div id="footer-wrap">
+        <div id="footer-top-link">
+          <div>개인정보처리방침</div>
+          <div>이용약관</div>
+          <div>이메일무단수집거부</div>
+          <div>홈페이지불편신고</div>
+          <div>사이트맵</div>
         </div>
-        <div>
-          COPYRIGHT 2019. BY 재단법인 독도재단. ALL RIGHTS RESERVED. Design by
-          KOWEB.
+        <div id="footer-bottom">
+          <div id="footer-bottom-top-infor">
+            <div>우) 37751 경상북도 포항시 북구 중흥로 231 동양빌딩 9층</div>
+            <div>이메일 : dokdo@koreadokdo.or.kr</div>
+            <div>대표번호 : 054-272-6513</div>
+            <div>팩스번호 : 054-272-6515</div>
+          </div>
+          <div id="footer-bottom-bottom-rightInfor">
+            COPYRIGHT 2019. BY 재단법인 독도재단. ALL RIGHTS RESERVED. Design by
+            KOWEB.
+          </div>
         </div>
-      </div>
-      <div id="footer-gotoTopBtn"></div>
-      <div>
-        <div className="facebook-account"></div>
-        <div className="instagram-account"></div>
-        <div className="naverBlog-account"></div>
-        <div className="youtube-account"></div>
+        <div id="footer-sns">
+          <div className="sns-wrap">
+            <div className="facebook-account"></div>
+          </div>
+          <div className="sns-wrap">
+            <div className="instagram-account"></div>
+          </div>
+          <div className="sns-wrap">
+            <div className="naverBlog-account"></div>
+          </div>
+          <div className="sns-wrap">
+            <div className="youtube-account"></div>
+          </div>
+        </div>
+        <div id="footer-gotoTopBtn">
+          <div id="footer-gotoTopBtn-arrow">
+            <div id="footer-gotoTopBtn-arrow-left"></div>
+            <div id="footer-gotoTopBtn-arrow-right"></div>
+          </div>
+          <div id="footer-gotoTopBtn-text">TOP</div>
+        </div>
       </div>
     </div>
   );
