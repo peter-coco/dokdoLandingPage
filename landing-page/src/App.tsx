@@ -8,9 +8,18 @@ import banner04 from "./images/banner/img_logo04.gif";
 import banner05 from "./images/banner/img_logo05.gif";
 import banner06 from "./images/banner/img_logo06.gif";
 
+import alarm_banner01 from "./images/alarmZone_banner/alarmZone_banner(1).jpg";
+import alarm_banner02 from "./images/alarmZone_banner/alarmZone_banner(2).jpg";
+import alarm_banner03 from "./images/alarmZone_banner/alarmZone_banner(3).jpg";
+import alarm_banner04 from "./images/alarmZone_banner/alarmZone_banner(4).jpg";
+import alarm_banner05 from "./images/alarmZone_banner/alarmZone_banner(5).jpg";
+import alarm_banner06 from "./images/alarmZone_banner/alarmZone_banner(6).jpg";
+import alarm_banner07 from "./images/alarmZone_banner/alarmZone_banner(7).png";
+
 import "./App.css";
 // import video from "./images/videoSample.mp4";
 import { stringify } from "node:querystring";
+import { forEachChild } from "typescript";
 
 function Header() {
   return (
@@ -249,11 +258,63 @@ function Container() {
                     <div className="SlideBtn-prev-img"></div>
                   </div>
                   <div className="SlideBtn-next">
-                    <div className="SlideBtn-next-img"></div>
+                    <div
+                      className="SlideBtn-next-img"
+                      onClick={() => {
+                        // const imgSlider = document.getElementsByClassName(
+                        //   "tail-banner"
+                        // );
+                        // console.log(imgSlider);
+                        // for (let i = 0; i < imgSlider.length; i++) {
+                        //   if (imgSlider[i].style.display == "none")
+                        //     imgSlider[i].style.display = "block";
+                        //   else imgSlider[i].style.display = "none";
+                        // }
+
+                        const imgSlider = document.getElementsByClassName(
+                          "tail-banner"
+                        );
+                        console.log(imgSlider[5]);
+                        const imgSliderWrap = document.getElementById(
+                          "tail-Banner-list"
+                        );
+                        imgSlider.style.transform = "rotate(50deg)";
+                        // for (let i = 0; i < imgSlider.length; i++) {
+                        //   if (imgSlider[i].style.display == "none")
+                        //     imgSlider[i].style.display = "block";
+                        //   else imgSlider[i].style.display = "none";
+                        // }
+                      }}
+                    ></div>
                   </div>
                 </div>
               </div>
               <div id="alarmZone-contents-list"></div>
+            </div>
+            <div id="alarmZone-tail-Banner-wrap">
+              <ul id="tail-Banner-list">
+                <li className="tail-banner">
+                  <img src={alarm_banner01} alt="" />
+                </li>
+                <li className="tail-banner">
+                  <img src={alarm_banner02} alt="" />
+                </li>
+                <li className="tail-banner">
+                  <img src={alarm_banner03} alt="" />
+                </li>
+                <li className="tail-banner">
+                  <img src={alarm_banner04} alt="" />
+                </li>
+                <li className="tail-banner">
+                  <img src={alarm_banner05} alt="" />
+                </li>
+                <li className="tail-banner">
+                  <img src={alarm_banner06} alt="" />
+                </li>
+                <li className="tail-banner">
+                  <img src={alarm_banner07} alt="" />
+                </li>
+              </ul>
             </div>
           </div>
         </div>
