@@ -7,6 +7,11 @@ import banner03 from "./images/banner/img_logo03.gif";
 import banner04 from "./images/banner/img_logo04.gif";
 import banner05 from "./images/banner/img_logo05.gif";
 import banner06 from "./images/banner/img_logo06.gif";
+import banner07 from "./images/banner/img_logo07.gif";
+import banner08 from "./images/banner/img_logo08.gif";
+import banner09 from "./images/banner/img_logo09.gif";
+import banner10 from "./images/banner/img_logo10.jpg";
+import banner11 from "./images/banner/img_logo11.jpg";
 
 import alarm_banner01 from "./images/alarmZone_banner/alarmZone_banner(1).jpg";
 import alarm_banner02 from "./images/alarmZone_banner/alarmZone_banner(2).jpg";
@@ -22,13 +27,13 @@ import { stringify } from "node:querystring";
 import { forEachChild } from "typescript";
 
 function Header() {
+  const [languageOption, setLanguageOption] = useState<boolean>(false);
   return (
     // <img src="" alt=""/>
     <div id="header">
       <div id="header-logo">
         {/* <img className="header-logo-img" src="./images/logo.svg" alt="" /> */}
       </div>
-
       <div id="header-menus">
         <div className="header-menu">
           <div>주요사업</div>
@@ -66,11 +71,19 @@ function Header() {
           <div>회원가입</div>
         </div>
         <div id="header-languages">
-          <div id="header-language-now">
+          <div
+            id="header-language-now"
+            onClick={() => {
+              setLanguageOption((pre) => !pre);
+            }}
+          >
             <div>한국어</div>
             <div id="header-language-arrow"></div>
           </div>
-          <div id="header-lagnuage-option">
+          <div
+            id="header-lagnuage-option"
+            style={languageOption ? { display: "flex" } : { display: "none" }}
+          >
             <div>한국어</div>
             <div>English</div>
             <div>日本語</div>
@@ -103,6 +116,8 @@ function Main() {
   const [videoTitle, setVideoTitle] = useState<string>(
     "./images/videoSample.mp4"
   );
+
+  const [mainLinkToggle, setMainLinkToggle] = useState<boolean>(false);
   return (
     <div id="main-wrap">
       <div id="main-video">
@@ -125,11 +140,44 @@ function Main() {
           <div id="video-onOffBtnText">STOP</div>
         </div>
       </div>
-      <div id="main-link">
-        <div id="main-link-openCloseBtn">
-          <div id="openCloseTop"></div>
-          <div id="openCloseBottom"></div>
-          <div id="openCloseText">OPEN</div>
+      <div
+        id="main-link"
+        style={mainLinkToggle ? { width: "80%" } : { width: "35%" }}
+      >
+        <div
+          id="main-link-openCloseBtn"
+          onClick={() => {
+            setMainLinkToggle((pre) => !pre);
+          }}
+        >
+          <div
+            id="openCloseTop"
+            style={
+              mainLinkToggle
+                ? { transform: `rotate(35deg)` }
+                : { transform: `rotate(-35deg)` }
+            }
+          ></div>
+          <div
+            id="openCloseBottom"
+            style={
+              mainLinkToggle
+                ? { transform: `rotate(-35deg)` }
+                : { transform: `rotate(35deg)` }
+            }
+          ></div>
+          <div
+            id="openCloseText"
+            style={mainLinkToggle ? { display: "none" } : { display: "block" }}
+          >
+            OPEN
+          </div>
+          <div
+            id="openCloseText"
+            style={mainLinkToggle ? { display: "block" } : { display: "none" }}
+          >
+            CLOSE
+          </div>
         </div>
       </div>
       <div id="main-picture-dokdo">
@@ -140,6 +188,18 @@ function Main() {
 }
 
 function Container() {
+  const [alarmZoneBannerIdx, setAlarmZoneBannerIdx] = useState<number>(0);
+
+  const [logoBannerIdx, setLogoBannerIdx] = useState<number>(0);
+
+  // let timer = setTimeout(() => {
+  //   let temp: number = alarmZoneBannerIdx;
+  //   temp += 1;
+  //   if (temp === 6) temp = 0;
+  //   setAlarmZoneBannerIdx(temp);
+  //   console.log(alarmZoneBannerIdx);
+  // }, 3000);
+
   return (
     <div id="container-wrap">
       <div id="container-notice">
@@ -255,35 +315,24 @@ function Container() {
                 <div className="head-Title">알림존</div>
                 <div id="alarmZone-head-SlideBtn">
                   <div className="SlideBtn-prev">
-                    <div className="SlideBtn-prev-img"></div>
+                    <div
+                      className="SlideBtn-prev-img"
+                      onClick={() => {
+                        let temp: number = alarmZoneBannerIdx;
+                        temp -= 1;
+                        if (temp === -1) temp = 5;
+                        setAlarmZoneBannerIdx(temp);
+                      }}
+                    ></div>
                   </div>
                   <div className="SlideBtn-next">
                     <div
                       className="SlideBtn-next-img"
                       onClick={() => {
-                        // const imgSlider = document.getElementsByClassName(
-                        //   "tail-banner"
-                        // );
-                        // console.log(imgSlider);
-                        // for (let i = 0; i < imgSlider.length; i++) {
-                        //   if (imgSlider[i].style.display == "none")
-                        //     imgSlider[i].style.display = "block";
-                        //   else imgSlider[i].style.display = "none";
-                        // }
-
-                        const imgSlider = document.getElementsByClassName(
-                          "tail-banner"
-                        );
-                        console.log(imgSlider[5]);
-                        const imgSliderWrap = document.getElementById(
-                          "tail-Banner-list"
-                        );
-                        imgSlider.style.transform = "rotate(50deg)";
-                        // for (let i = 0; i < imgSlider.length; i++) {
-                        //   if (imgSlider[i].style.display == "none")
-                        //     imgSlider[i].style.display = "block";
-                        //   else imgSlider[i].style.display = "none";
-                        // }
+                        let temp: number = alarmZoneBannerIdx;
+                        temp += 1;
+                        if (temp === 6) temp = 0;
+                        setAlarmZoneBannerIdx(temp);
                       }}
                     ></div>
                   </div>
@@ -292,7 +341,13 @@ function Container() {
               <div id="alarmZone-contents-list"></div>
             </div>
             <div id="alarmZone-tail-Banner-wrap">
-              <ul id="tail-Banner-list">
+              <ul
+                id="tail-Banner-list"
+                style={{
+                  transition: "1000ms",
+                  transform: `translate(${alarmZoneBannerIdx * -280}px)`,
+                }}
+              >
                 <li className="tail-banner">
                   <img src={alarm_banner01} alt="" />
                 </li>
@@ -389,12 +444,34 @@ function Container() {
       <div id="container-logo">
         <div id="container-logo-wrap">
           <div id="container-logo-btn">
-            <div id="container-logo-prev"></div>
+            <div
+              id="container-logo-prev"
+              onClick={() => {
+                let temp: number = logoBannerIdx;
+                temp -= 1;
+                if (temp === -1) temp = 4;
+                setLogoBannerIdx(temp);
+              }}
+            ></div>
             <div id="container-logo-playNpause"></div>
-            <div id="container-logo-next"></div>
+            <div
+              id="container-logo-next"
+              onClick={() => {
+                let temp: number = logoBannerIdx;
+                temp += 1;
+                if (temp === 5) temp = 0;
+                setLogoBannerIdx(temp);
+              }}
+            ></div>
           </div>
           <div id="container-logo-list">
-            <ul id="container-logo-banner">
+            <ul
+              id="container-logo-banner"
+              style={{
+                transition: "1000ms",
+                transform: `translate(${logoBannerIdx * -195}px)`,
+              }}
+            >
               <li className="banner">
                 <img src={banner01} alt="" />
               </li>
@@ -412,6 +489,21 @@ function Container() {
               </li>
               <li className="banner">
                 <img src={banner06} alt="" />
+              </li>
+              <li className="banner">
+                <img src={banner07} alt="" />
+              </li>
+              <li className="banner">
+                <img src={banner08} alt="" />
+              </li>
+              {/* <li className="banner">
+                <img src={banner09} alt="" />
+              </li> */}
+              <li className="banner">
+                <img src={banner10} alt="" />
+              </li>
+              <li className="banner">
+                <img src={banner11} alt="" />
               </li>
             </ul>
           </div>
@@ -458,7 +550,16 @@ function Footer() {
             <div className="youtube-account"></div>
           </div>
         </div>
-        <div id="footer-gotoTopBtn">
+        <div
+          id="footer-gotoTopBtn"
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              // left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <div id="footer-gotoTopBtn-arrow">
             <div id="footer-gotoTopBtn-arrow-left"></div>
             <div id="footer-gotoTopBtn-arrow-right"></div>
