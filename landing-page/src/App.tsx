@@ -275,13 +275,23 @@ function Header({ mainLinkToggle }: { mainLinkToggle: boolean }) {
             <div id="header-language-arrow"></div>
           </div>
           <div
-            id="header-lagnuage-option"
-            style={languageOption ? { display: "flex" } : { display: "none" }}
+            id="header-language-option"
+            style={
+              languageOption
+                ? {
+                    height: "150px",
+                    visibility: "visible",
+                  }
+                : {
+                    height: "0px",
+                    visibility: "hidden",
+                  }
+            }
           >
-            <div>한국어</div>
-            <div>English</div>
-            <div>日本語</div>
-            <div>中文</div>
+            <div className="languages">한국어</div>
+            <div className="languages">English</div>
+            <div className="languages">日本語</div>
+            <div className="languages">中文</div>
           </div>
         </div>
       </div>
@@ -388,7 +398,7 @@ function Main({
 
 function Container() {
   const [alarmZoneBannerIdx, setAlarmZoneBannerIdx] = useState<number>(0);
-
+  const [noticeContentsIdx, setNoticeContentsIdx] = useState<number>(0);
   const [logoBannerIdx, setLogoBannerIdx] = useState<number>(0);
 
   let timer = setTimeout(() => {
@@ -396,7 +406,7 @@ function Container() {
     temp += 1;
     if (temp === 6) temp = 0;
     setAlarmZoneBannerIdx(temp);
-    console.log(alarmZoneBannerIdx);
+    // console.log(alarmZoneBannerIdx);
   }, 3000);
 
   return (
@@ -420,14 +430,73 @@ function Container() {
               </div>
             </div>
             <div id="notice-head-contents-title">
-              <div className="head-content-title head-content-title-active">
+              <div
+                className="head-content-title"
+                onClick={() => {
+                  setNoticeContentsIdx(0);
+                }}
+                style={
+                  noticeContentsIdx === 0
+                    ? {
+                        position: "relative",
+                        left: "40px",
+                        background: "#41478f",
+                        color: "white",
+                        transition: "all 300ms ease",
+                      }
+                    : {}
+                }
+              >
                 공지사항
               </div>
-              <div className="head-content-title">언론 & 홍보</div>
-              <div className="head-content-title">보도자료</div>
+              <div
+                className="head-content-title"
+                onClick={() => {
+                  setNoticeContentsIdx(1);
+                }}
+                style={
+                  noticeContentsIdx === 1
+                    ? {
+                        position: "relative",
+                        left: "40px",
+                        background: "#41478f",
+                        color: "white",
+                        transition: "all 300ms ease",
+                      }
+                    : {}
+                }
+              >
+                언론 & 홍보
+              </div>
+              <div
+                className="head-content-title"
+                onClick={() => {
+                  setNoticeContentsIdx(2);
+                }}
+                style={
+                  noticeContentsIdx === 2
+                    ? {
+                        position: "relative",
+                        left: "40px",
+                        background: "#41478f",
+                        color: "white",
+                        transition: "all 300ms ease",
+                      }
+                    : {}
+                }
+              >
+                보도자료
+              </div>
             </div>
           </div>
-          <div id="notice-contents">
+          <div
+            className="notice-contents"
+            style={
+              noticeContentsIdx === 0
+                ? { display: "flex" }
+                : { display: "none" }
+            }
+          >
             <div className="content">
               <div className="content-title">
                 2021년도 「대학 독도동아리 결성 및 활성화」공고
@@ -461,6 +530,84 @@ function Container() {
                 전달하게 되었습니다.
               </div>
               <div className="content-date">2020-10-23</div>
+            </div>
+          </div>
+          <div
+            className="notice-contents"
+            style={
+              noticeContentsIdx === 1
+                ? {
+                    display: "flex",
+                  }
+                : { display: "none" }
+            }
+          >
+            <div className="content">
+              <div className="content-title">[기고]독도교육주간 활성화해야</div>
+              <div className="content-subscrition">
+                클릭시 기사로 연결됩니다.
+              </div>
+              <div className="content-date">2021-05-06</div>
+            </div>
+            <div className="content">
+              <div className="content-title">
+                상생포럼 15기 3주차-"독도는 한국 영토, 역사적 진실 알려야"
+              </div>
+              <div className="content-subscrition">
+                클릭시 기사로 연결됩니다.
+              </div>
+              <div className="content-date">2021-04-30</div>
+            </div>
+            <div className="content">
+              <div className="content-title">
+                독도재단-대구경북공예협동조합, 상호협력'맞손'
+              </div>
+              <div className="content-subscrition">
+                클릭시 기사로 연결됩니다.
+              </div>
+              <div className="content-date">2021-04-26</div>
+            </div>
+          </div>
+          <div
+            className="notice-contents"
+            style={
+              noticeContentsIdx === 2
+                ? { display: "flex" }
+                : { display: "none" }
+            }
+          >
+            <div className="content">
+              <div className="content-title">
+                [보도자료]일본은 후쿠시마 원전 오염수 방류 결정 즉각 철회하라
+              </div>
+              <div className="content-subscrition">
+                "일본은 후쿠시마 원전 오염수 방류 결정 즉각 철회하라" 독도재단,
+                독도향우회, 30일 일본대사관 앞서 규탄성명서 발표 경상북도
+                출연기관인 독도재단은"
+              </div>
+              <div className="content-date">2021-04-30</div>
+            </div>
+            <div className="content">
+              <div className="content-title">
+                [보도자료]독도재단, 플라스틱 중리기'고고챌린지'동참
+              </div>
+              <div className="content-subscrition">
+                독도재단, 플라스틱 줄이기'고고 챌린지'참여 일회용품 사용 중리고,
+                다회용기 사용 생활화하기로 경상북도 출연기관인 (재)독도재단은
+                신순식 사무실
+              </div>
+              <div className="content-date">2021-04-15</div>
+            </div>
+            <div className="content">
+              <div className="content-title">
+                독도재단, 제3기 자문위원회 발족
+              </div>
+              <div className="content-subscrition">
+                독도재단, 제3기 자문위원회 발족 "분야별 전문가 의견
+                반영...독도수호 플랫폼 강화" 경상북도 출연기관인 독도재단은
+                13일(화) 재단 회의실에서 제3의
+              </div>
+              <div className="content-date">2020-04-13</div>
             </div>
           </div>
         </div>
@@ -513,7 +660,7 @@ function Container() {
                 <div className="head-English-Text">Banner</div>
                 <div className="head-Title">알림존</div>
                 <div id="alarmZone-head-SlideBtn">
-                  <div className="SlideBtn-prev">
+                  <div className="SlideBtn SlideBtn-prev">
                     <div
                       className="SlideBtn-prev-img"
                       onClick={() => {
@@ -524,7 +671,7 @@ function Container() {
                       }}
                     ></div>
                   </div>
-                  <div className="SlideBtn-next">
+                  <div className="SlideBtn SlideBtn-next">
                     <div
                       className="SlideBtn-next-img"
                       onClick={() => {
@@ -610,16 +757,19 @@ function Container() {
                 <div className="moreBtn-vertical"></div>
               </div>
             </div>
-            <div id="dokdoMagazine-img"></div>
+
             <div id="dokdoMagazine-bottom">
+              <div id="dokdoMagazine-img"></div>
               <div id="dokdoMagazine-bottom-top">
                 <div id="dokdoMagazine-bottom-top-date">2021.01</div>
                 <div id="dokdoMagazine-bottom-top-arrow"></div>
               </div>
               <div id="dokdoMagazine-bottom-title">2020 독도로(가을겨울호)</div>
               <div id="dokdoMagazine-bottom-bottom">
-                <div id="dokdoMagazine-bottom-bottom-EBookBtn">E-book보기</div>
-                <div id="dokdoMagazine-bottom-bottom-askMagazineBtn">
+                <div className="dokdoMagazine-bottom-bottom-Btn">
+                  E-book보기
+                </div>
+                <div className="dokdoMagazine-bottom-bottom-Btn">
                   매거진신청
                 </div>
               </div>
@@ -632,7 +782,9 @@ function Container() {
               교통편을 안내해 드립니다.
             </div>
             <div id="dokdo-load-top-island-img"></div>
-            <div id="dokdo-load-top-arrow"></div>
+            <div id="dokdo-load-top-arrow-btn">
+              <div id="dokdo-load-top-arrow"></div>
+            </div>
             <div id="dokdo-load-bottom-contact-title">
               울릉군 독도관리사무소
               <div id="dokdo-load-bottom-contact-number">T.054-790-6646</div>
@@ -717,11 +869,11 @@ function Footer() {
     <div id="footer">
       <div id="footer-wrap">
         <div id="footer-top-link">
-          <div>개인정보처리방침</div>
-          <div>이용약관</div>
-          <div>이메일무단수집거부</div>
-          <div>홈페이지불편신고</div>
-          <div>사이트맵</div>
+          <div className="footer-top-link-list-active">개인정보처리방침</div>
+          <div className="footer-top-link-list">이용약관</div>
+          <div className="footer-top-link-list">이메일무단수집거부</div>
+          <div className="footer-top-link-list">홈페이지불편신고</div>
+          <div className="footer-top-link-list">사이트맵</div>
         </div>
         <div id="footer-bottom">
           <div id="footer-bottom-top-infor">
