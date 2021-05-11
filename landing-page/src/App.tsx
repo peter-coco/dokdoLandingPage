@@ -21,6 +21,17 @@ import alarm_banner05 from "./images/alarmZone_banner/alarmZone_banner(5).jpg";
 import alarm_banner06 from "./images/alarmZone_banner/alarmZone_banner(6).jpg";
 import alarm_banner07 from "./images/alarmZone_banner/alarmZone_banner(7).png";
 
+import main_menu01 from "./images/main_img/img_link01.svg";
+import main_menu02 from "./images/main_img/img_link02.svg";
+import main_menu03 from "./images/main_img/img_link03.svg";
+import main_menu04 from "./images/main_img/img_link04.svg";
+import main_menu05 from "./images/main_img/img_link05.svg";
+import main_menu06 from "./images/main_img/img_link06.svg";
+import main_menu07 from "./images/main_img/img_link07.svg";
+import main_menu08 from "./images/main_img/img_link08.svg";
+import main_menu09 from "./images/main_img/img_link09.svg";
+import main_menu10 from "./images/main_img/img_link10.svg";
+
 import "./App.css";
 // import video from "./images/videoSample.mp4";
 import { stringify } from "node:querystring";
@@ -36,7 +47,7 @@ function Header({ mainLinkToggle }: { mainLinkToggle: boolean }) {
       </div>
       <ul
         id="header-menus"
-        style={mainLinkToggle ? { color: "white" } : { color: "black" }}
+        style={mainLinkToggle ? { color: "white" } : { color: "#333" }}
       >
         <li className="header-menu mainBusiness">
           <div>주요사업</div>
@@ -88,7 +99,6 @@ function Header({ mainLinkToggle }: { mainLinkToggle: boolean }) {
             </li>
           </ul>
         </li>
-
         <li className="header-menu datas">
           <div>자료실</div>
           <div className="menu-arrow data-arrow"></div>
@@ -281,10 +291,14 @@ function Header({ mainLinkToggle }: { mainLinkToggle: boolean }) {
                 ? {
                     height: "150px",
                     visibility: "visible",
+                    opacity: "1",
+                    transition: "all 300ms",
                   }
                 : {
                     height: "0px",
                     visibility: "hidden",
+                    opacity: "0",
+                    transition: "all 300ms",
                   }
             }
           >
@@ -326,6 +340,7 @@ function Main({
   const [videoTitle, setVideoTitle] = useState<string>(
     "./images/videoSample.mp4"
   );
+  const [videoOnOffToggle, setVideoOnOffToggle] = useState<boolean>(false);
 
   return (
     <div id="main-wrap">
@@ -344,9 +359,25 @@ function Main({
             id="video-src"
           />
         </video>
-        <div id="video-OnOffBtn">
-          <div id="video-onOffBtnImg"></div>
-          <div id="video-onOffBtnText">STOP</div>
+        <div
+          className="video-OnOffBtn"
+          style={videoOnOffToggle ? { display: "none" } : { display: "flex" }}
+          onClick={() => {
+            setVideoOnOffToggle((pre) => !pre);
+          }}
+        >
+          <div id="video-OffBtnImg"></div>
+          <div className="video-OnOffBtnText">STOP</div>
+        </div>
+        <div
+          className="video-OnOffBtn"
+          style={videoOnOffToggle ? { display: "flex" } : { display: "none" }}
+          onClick={() => {
+            setVideoOnOffToggle((pre) => !pre);
+          }}
+        >
+          <div id="video-OnBtnImg"></div>
+          <div className="video-OnOffBtnText">START</div>
         </div>
       </div>
       <div
@@ -388,6 +419,108 @@ function Main({
             CLOSE
           </div>
         </div>
+        <div id="main-link-menu-wrap">
+          <div id="main-link-menu-text">
+            <div
+              className="main-link-menu-text-subscription"
+              style={
+                mainLinkToggle
+                  ? {
+                      height: "0px",
+                      opacity: "0",
+                      transition: "all 100ms",
+                    }
+                  : {
+                      height: "100%",
+                      opacity: "1",
+                      transition: "all 4s",
+                    }
+              }
+            >
+              <div className="main-link-menu-text-title">독도,</div>
+              한반도의 아침이 시작되는 최동단!
+            </div>
+            <div
+              className="main-link-menu-text-subscription"
+              style={
+                mainLinkToggle
+                  ? { opacity: "1", transition: "all 5s" }
+                  : { opacity: "0", transition: "all 10ms" }
+              }
+            >
+              <div className="main-link-menu-text-title">독도,</div>
+              천연기념물 제336호! 문화,예술의 섬입니다.
+            </div>
+          </div>
+          <ul
+            id="main-link-menus"
+            style={
+              mainLinkToggle
+                ? {
+                    width: "700px",
+                    visibility: "visible",
+                    opacity: "1",
+                    transition: "all 2000ms",
+                  }
+                : {
+                    width: "0px",
+                    visibility: "hidden",
+                    opacity: "0",
+                    transition: "all 500ms",
+                  }
+            }
+            // style={
+            //   mainLinkToggle
+            //     ? { display: "flex", animation: "fadeIn 2s" }
+            //     : { display: "none", animation: "fadeOut 2s" }
+            // }
+          >
+            <ul className="main-link-menu-top">
+              <li className="main-link-menu">
+                <img src={main_menu01}></img>
+                <div>홍보관</div>
+              </li>
+              <li className="main-link-menu">
+                <img src={main_menu02}></img>
+                <div>독도영상</div>
+              </li>
+              <li className="main-link-menu">
+                <img src={main_menu03}></img>
+                <div>독도사진</div>
+              </li>
+              <li className="main-link-menu">
+                <img src={main_menu04}></img>
+                <div>언론,홍보</div>
+              </li>
+              <li className="main-link-menu">
+                <img src={main_menu05}></img>
+                <div>계약체결</div>
+              </li>
+            </ul>
+            <ul className="main-link-menu-bottom">
+              <li className="main-link-menu">
+                <img src={main_menu06}></img>
+                <div>고객참여</div>
+              </li>
+              <li className="main-link-menu">
+                <img src={main_menu07}></img>
+                <div>국민제안</div>
+              </li>
+              <li className="main-link-menu">
+                <img src={main_menu08}></img>
+                <div>독도교육신청</div>
+              </li>
+              <li className="main-link-menu">
+                <img src={main_menu09}></img>
+                <div>홍보버스신청</div>
+              </li>
+              <li className="main-link-menu">
+                <img src={main_menu10}></img>
+                <div>전시자료신청</div>
+              </li>
+            </ul>
+          </ul>
+        </div>
       </div>
       <div id="main-picture-dokdo">
         <div id="main-picture-cloud"></div>
@@ -400,13 +533,25 @@ function Container() {
   const [alarmZoneBannerIdx, setAlarmZoneBannerIdx] = useState<number>(0);
   const [noticeContentsIdx, setNoticeContentsIdx] = useState<number>(0);
   const [logoBannerIdx, setLogoBannerIdx] = useState<number>(0);
+  const [logoBannerOnOffBtn, setLogoBannerOnOffBtn] = useState<boolean>(true);
 
-  let timer = setTimeout(() => {
+  let alarmZoneTimer = setTimeout(() => {
     let temp: number = alarmZoneBannerIdx;
     temp += 1;
     if (temp === 6) temp = 0;
     setAlarmZoneBannerIdx(temp);
     // console.log(alarmZoneBannerIdx);
+  }, 3000);
+
+  let logoBannerTimer = setTimeout(() => {
+    if (logoBannerOnOffBtn === false) {
+      clearTimeout(logoBannerTimer);
+    } else {
+      let temp: number = logoBannerIdx;
+      temp += 1;
+      if (temp === 5) temp = 0;
+      setLogoBannerIdx(temp);
+    }
   }, 3000);
 
   return (
@@ -804,7 +949,24 @@ function Container() {
                 setLogoBannerIdx(temp);
               }}
             ></div>
-            <div id="container-logo-playNpause"></div>
+            <div
+              id="container-logo-play"
+              onClick={() => {
+                setLogoBannerOnOffBtn((pre) => !pre);
+              }}
+              style={
+                logoBannerOnOffBtn ? { display: "none" } : { display: "block" }
+              }
+            ></div>
+            <div
+              id="container-logo-pause"
+              onClick={() => {
+                setLogoBannerOnOffBtn((pre) => !pre);
+              }}
+              style={
+                logoBannerOnOffBtn ? { display: "block" } : { display: "none" }
+              }
+            ></div>
             <div
               id="container-logo-next"
               onClick={() => {
