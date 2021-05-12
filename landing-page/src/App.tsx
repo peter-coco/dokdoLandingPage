@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 
 import banner01 from "./images/banner/img_logo01.gif";
@@ -342,6 +342,10 @@ function Main({
   );
   const [videoOnOffToggle, setVideoOnOffToggle] = useState<boolean>(false);
 
+  useEffect(() => {
+    console.log(window.innerWidth);
+  }, [window.innerWidth]);
+
   return (
     <div id="main-wrap">
       <div id="main-video">
@@ -382,7 +386,13 @@ function Main({
       </div>
       <div
         id="main-link"
-        style={mainLinkToggle ? { width: "80%" } : { width: "35%" }}
+        style={
+          mainLinkToggle
+            ? window.innerWidth <= 1200
+              ? { width: "90%" }
+              : { width: "80%" }
+            : { width: "35%" }
+        }
       >
         <div
           id="main-link-openCloseBtn"
@@ -634,7 +644,7 @@ function Container() {
               </div>
             </div>
           </div>
-          <div
+          <ul
             className="notice-contents"
             style={
               noticeContentsIdx === 0
@@ -642,7 +652,7 @@ function Container() {
                 : { display: "none" }
             }
           >
-            <div className="content">
+            <li className="content">
               <div className="content-title">
                 2021년도 「대학 독도동아리 결성 및 활성화」공고
               </div>
@@ -652,8 +662,8 @@ function Container() {
                 감사합니다.
               </div>
               <div className="content-date">2021-03-17</div>
-            </div>
-            <div className="content">
+            </li>
+            <li className="content">
               <div className="content-title">
                 직원 채용시험 최종 합격자 공고
               </div>
@@ -664,8 +674,8 @@ function Container() {
                 지원 부탁드립니다.
               </div>
               <div className="content-date">2021-02-23</div>
-            </div>
-            <div className="content">
+            </li>
+            <li className="content">
               <div className="content-title">
                 독도를 상징하는 '도랑'과 '도아' 이모티콘 무료배포!
               </div>
@@ -675,8 +685,8 @@ function Container() {
                 전달하게 되었습니다.
               </div>
               <div className="content-date">2020-10-23</div>
-            </div>
-          </div>
+            </li>
+          </ul>
           <div
             className="notice-contents"
             style={
@@ -829,7 +839,6 @@ function Container() {
                   </div>
                 </div>
               </div>
-              <div id="alarmZone-contents-list"></div>
             </div>
             <div id="alarmZone-tail-Banner-wrap">
               <ul
@@ -902,7 +911,6 @@ function Container() {
                 <div className="moreBtn-vertical"></div>
               </div>
             </div>
-
             <div id="dokdoMagazine-bottom">
               <div id="dokdoMagazine-img"></div>
               <div id="dokdoMagazine-bottom-top">

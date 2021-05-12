@@ -95,6 +95,7 @@
   transition: 1000ms;
   height: 100%;
   background-image: -webkit-linear-gradient(-40deg, #41478f 35%, #c1445a);
+  overflow: hidden;
 }
 
 #main-link-openCloseBtn {
@@ -147,11 +148,17 @@
   transform: rotate(-35deg);
   transition: all 300ms;
 }
+/* 
+#main-link-menu-wrap {
+  width: 100%;
+  overflow: hidden;
+} */
 
 #main-link-menu-text {
   position: absolute;
   top: 30%;
   left: 100px;
+  overflow: hidden;
   animation: fadeIn 4s;
   transition: all 1s;
 }
@@ -774,31 +781,35 @@
 .content {
   padding: 0px 0px 0px 40px;
   box-sizing: border-box;
+  /* width: 30%; */
   z-index: 3;
 }
 
 .content-title {
   font-size: 18px;
-  width: 310px;
-  height: 50px;
+  /* max-width: 310px; */
+  /* min-width: 250px; */
+  /* height: 50px; */
   color: #333;
   font-weight: 550;
   letter-spacing: -0.5px;
   line-height: 1.6em;
+  display: -webkit-box;
   word-break: keep-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .content-subscrition {
   margin-top: 15px;
-  width: 310px;
+  /* max-width: 310px; */
   color: #666;
   /* height: 60px; */
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-  /* text-overflow: ellipsis; */
-  /* white-space: nowrap; */
 }
 
 .content-date {
@@ -862,7 +873,7 @@
 }
 
 #eventScheduleNAlarmZone-tail {
-  display: flex;
+  /* display: flex; */
   width: 50%;
   height: 100%;
   position: absolute;
@@ -934,6 +945,7 @@
   /* background: #f6f1f2; */
   padding: 65px 0px 65px 65px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 #alarmZone-head-SlideBtn {
@@ -1293,14 +1305,14 @@ span {
   /* background-color: cornflowerblue; */
   max-width: 1400px;
   margin: 40px auto;
+  /* overflow: hidden; */
   display: flex;
 }
 
 #container-logo-wrap {
   display: flex;
   position: relative;
-  max-width: 1190px;
-  margin-left: 210px;
+  max-width: 1370px;
   width: 100%;
 
   /* padding-left: 210px; */
@@ -1308,10 +1320,9 @@ span {
 }
 
 #container-logo-btn {
-  position: absolute;
-  top: 50%;
-  left: -210px;
-  margin-top: -8px;
+  position: relative;
+  top: 35%;
+  margin-right: 50px;
   display: flex;
   justify-content: space-between;
   /* gap: 40px; */
@@ -1371,6 +1382,7 @@ span {
   display: flex;
   width: 1170px;
   height: 100%;
+  /* overflow: hidden; */
 }
 
 .banner {
@@ -1407,9 +1419,16 @@ li {
 
 #footer-top-link {
   display: flex;
-  width: 100%;
-  gap: 40px;
+  flex-wrap: wrap;
+
+  /* width: 100%; */
+  /* gap: 40px; */
 }
+
+#footer-top-link > div {
+  margin-right: 40px;
+}
+
 .footer-top-link-list-active {
   font-size: 14px;
   color: #b5bbff;
@@ -1526,4 +1545,170 @@ li {
 .footer-top-link-list:hover {
   color: #fff;
   transition: color 300ms;
+}
+
+@media (max-width: 1580px) {
+  #container-wrap {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 1400px) {
+  #notice-head {
+    width: 322px;
+  }
+
+  #main-link {
+    margin-top: 100px;
+    height: 89%;
+  }
+}
+
+@media (max-width: 1200px) {
+  #magazine-live-wrap {
+    display: none;
+  }
+
+  #magazine-back-wrap {
+    width: 100%;
+  }
+
+  #magazine-dokdoMagazine {
+    width: 50%;
+  }
+
+  #magazine-dokdo-load {
+    width: 50%;
+  }
+
+  #footer-sns {
+    bottom: 20px;
+  }
+  #main-video {
+    display: none;
+  }
+  #main-link-openCloseBtn {
+    display: none;
+  }
+}
+
+@media (max-width: 1025px) {
+  #container-eventScheduleNAlarmZone {
+    height: 834px;
+  }
+
+  #eventScheduleNAlarmZone-wrap {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  #eventScheduleNAlarmZone-tail {
+    display: none;
+  }
+
+  #eventSchedule,
+  #alarmZone {
+    width: 100%;
+    padding: 65px 0px 65px 10px;
+  }
+
+  #alarmZone {
+    background: #f6f1f2;
+  }
+
+  #alarmZone-head-SlideBtn {
+    right: 0;
+  }
+
+  #alarmZone-tail-Banner-wrap {
+    left: 300px;
+  }
+
+  .notice-contents {
+    flex-direction: column;
+  }
+
+  .content {
+    margin-bottom: 20px;
+  }
+
+  .content-title {
+    margin-bottom: 0px;
+    -webkit-line-clamp: 1;
+  }
+  .content-subscrition {
+    margin-top: 0px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+
+  .content-date {
+    position: relative;
+    top: 0px;
+  }
+
+  #footer-wrap {
+    padding: 40px 10px;
+  }
+
+  #footer-bottom {
+    margin-top: 20px;
+  }
+
+  #footer-bottom-top-infor {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+
+@media (max-width: 610px) {
+  #eventSchedule-contents {
+    flex-direction: column;
+  }
+
+  #alarmZone-tail-Banner-wrap {
+    left: 250px;
+  }
+
+  .eventSchedule-content {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+
+  .eventSchedule-content-subscription {
+    margin-top: 40px;
+  }
+
+  #container-magazine {
+    height: 950px;
+  }
+  #magazine-back-wrap {
+    flex-direction: column;
+  }
+
+  #magazine-dokdoMagazine {
+    height: 50%;
+    width: 100%;
+  }
+
+  #dokdoMagazine-top {
+    padding: 65px 10px 0;
+  }
+
+  #dokdoMagazine-head-moreBtn {
+    top: 65px;
+    right: 10px;
+  }
+  #magazine-dokdo-load {
+    width: 100%;
+    height: 50%;
+    padding: 65px 10px 0;
+  }
+
+  #container-logo-btn {
+    display: none;
+  }
 }
