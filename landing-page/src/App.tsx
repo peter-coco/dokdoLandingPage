@@ -42,9 +42,7 @@ function Header({ mainLinkToggle }: { mainLinkToggle: boolean }) {
   return (
     // <img src="" alt=""/>
     <div id="header">
-      <div id="header-logo">
-        {/* <img className="header-logo-img" src="./images/logo.svg" alt="" /> */}
-      </div>
+      <div id="header-logo"></div>
       <ul
         id="header-menus"
         style={mainLinkToggle ? { color: "white" } : { color: "#333" }}
@@ -268,11 +266,11 @@ function Header({ mainLinkToggle }: { mainLinkToggle: boolean }) {
       <div id="header-utils">
         <div id="header-login">
           <div id="login-img"></div>
-          <div>로그인</div>
+          <div className="header-text">로그인</div>
         </div>
         <div id="header-join">
           <div id="join-img"></div>
-          <div>회원가입</div>
+          <div className="header-text">회원가입</div>
         </div>
         <div id="header-languages">
           <div
@@ -281,7 +279,7 @@ function Header({ mainLinkToggle }: { mainLinkToggle: boolean }) {
               setLanguageOption((pre) => !pre);
             }}
           >
-            <div>한국어</div>
+            <div className="header-text language-now">한국어</div>
             <div id="header-language-arrow"></div>
           </div>
           <div
@@ -341,10 +339,16 @@ function Main({
     "./images/videoSample.mp4"
   );
   const [videoOnOffToggle, setVideoOnOffToggle] = useState<boolean>(false);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   useEffect(() => {
     console.log(window.innerWidth);
   }, [window.innerWidth]);
+
+  window.addEventListener("resize", () => {
+    // console.log(window.innerWidth, windowWidth);
+    setWindowWidth(window.innerWidth);
+  });
 
   return (
     <div id="main-wrap">
@@ -388,9 +392,11 @@ function Main({
         id="main-link"
         style={
           mainLinkToggle
-            ? window.innerWidth <= 1200
+            ? windowWidth <= 1200
               ? { width: "90%" }
               : { width: "80%" }
+            : windowWidth <= 1200
+            ? { width: `${windowWidth - 79}px` }
             : { width: "35%" }
         }
       >
@@ -435,10 +441,22 @@ function Main({
               className="main-link-menu-text-subscription"
               style={
                 mainLinkToggle
+                  ? windowWidth <= 1200
+                    ? {
+                        height: "0px",
+                        opacity: "0",
+                        transition: "all 1ms",
+                      }
+                    : {
+                        height: "0px",
+                        opacity: "0",
+                        transition: "all 1ms",
+                      }
+                  : windowWidth <= 1200
                   ? {
                       height: "0px",
                       opacity: "0",
-                      transition: "all 100ms",
+                      transition: "all 1ms",
                     }
                   : {
                       height: "100%",
@@ -454,8 +472,14 @@ function Main({
               className="main-link-menu-text-subscription"
               style={
                 mainLinkToggle
-                  ? { opacity: "1", transition: "all 5s" }
-                  : { opacity: "0", transition: "all 10ms" }
+                  ? {
+                      opacity: "1",
+                      transition: "all 1500ms",
+                      marginRight: "30px",
+                    }
+                  : windowWidth <= 1200
+                  ? { opacity: "1", transition: "all 4s" }
+                  : { opacity: "0", transition: "all 1ms" }
               }
             >
               <div className="main-link-menu-text-title">독도,</div>
@@ -466,11 +490,25 @@ function Main({
             id="main-link-menus"
             style={
               mainLinkToggle
+                ? windowWidth <= 1200
+                  ? {
+                      width: "700px",
+                      visibility: "visible",
+                      opacity: "1",
+                      transition: "all 1000ms",
+                    }
+                  : {
+                      width: "700px",
+                      visibility: "visible",
+                      opacity: "1",
+                      transition: "all 1000ms",
+                    }
+                : windowWidth <= 1200
                 ? {
                     width: "700px",
                     visibility: "visible",
                     opacity: "1",
-                    transition: "all 2000ms",
+                    transition: "all 1000ms",
                   }
                 : {
                     width: "0px",
