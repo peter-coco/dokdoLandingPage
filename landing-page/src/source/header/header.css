@@ -1,0 +1,348 @@
+/* header */
+
+#header {
+  position: absolute;
+  display: flex;
+  padding: 46px 0px 0px 0px;
+  width: 100%;
+  height: 120px;
+  box-sizing: border-box;
+  z-index: 80;
+}
+
+#header-logo {
+  position: absolute;
+  left: 70px;
+  background: url(../../images/logo.svg) no-repeat 50% 0;
+  background-size: 190px 36px;
+  height: 80px;
+  width: 190px;
+  /* flex: 1; */
+}
+
+/* header-menus */
+#header-menus {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50px;
+  left: 23%;
+  width: 39%;
+  transition: 300ms;
+  /* color: #333; */
+  /* font-weight: 400; */
+}
+
+/* .header-menu {
+    display: flex;
+  } */
+
+.header-menu {
+  position: relative;
+  transition: all 300ms ease;
+  /* width: 300px; */
+  font-size: 15px;
+  /* color: rgb(31, 30, 30); */
+  padding: 0 20px 30px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.menu-arrow {
+  visibility: hidden;
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  opacity: 0;
+  width: 8px;
+  height: 6px;
+  background: url("../../images/img_gnb_arrow.png") no-repeat 50% 0;
+  transition: all 0.3s ease;
+}
+
+.header-sub-menu {
+  visibility: hidden;
+  opacity: 0;
+  width: 170px;
+  /* height: 400px; */
+  padding: 0px 0px 0px 15px;
+  box-sizing: border-box;
+  background: #383a4a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 40px;
+  right: 0%;
+  transform: transLateX(50%);
+  transition: all 300ms ease;
+}
+
+.sub-menu-sub-menu {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  /* height: 200px; */
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  transition: all 300ms ease;
+  min-width: 230px;
+  box-sizing: border-box;
+  padding: 15px 30px;
+  background: #fff;
+  border: 1px solid #41478f;
+  color: black;
+  transition: all 300ms ease;
+}
+
+.sub-menu-sub-menu > li {
+  padding: 15px 10px;
+  box-sizing: border-box;
+}
+
+.sub-menu {
+  position: relative;
+  padding: 15px 0px;
+}
+
+.sub-menu-title {
+  /* width: 120px; */
+  word-break: keep-all;
+}
+
+.sub-menu-arrowDown {
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  border-left: 4px solid #9c9da5;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: all 300ms ease;
+}
+
+.sub-menu-sub-menu > li {
+  word-break: keep-all;
+}
+
+/* datas:hover */
+.header-menu:hover {
+  color: #41478f;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+.header-menu:hover .menu-arrow {
+  visibility: visible;
+  opacity: 1;
+  transition: all 300ms ease;
+}
+
+.header-menu:hover .header-sub-menu {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  right: 50%;
+  transform: transLateX(50%);
+  transition: all 300ms ease;
+}
+
+/* sub-menu-dokdoPictures:hover */
+.sub-menu:hover {
+  cursor: pointer;
+  color: #fee728;
+  text-decoration: underline;
+  transition: all 300ms ease;
+}
+
+.sub-menu:hover .sub-menu-arrowDown {
+  border-left: 4px solid #fee728;
+  transition: all 300ms ease;
+}
+
+.sub-menu:hover .sub-menu-sub-menu {
+  visibility: visible;
+  opacity: 1;
+  left: 155px;
+  transition: all 300ms ease;
+}
+
+.sub-menu-sub-menu > li:hover {
+  color: #41478f;
+  text-decoration: underline;
+  transition: all 300ms ease;
+}
+
+/* sub-menu-dokdoVideo:hover */
+
+/* .sub-menu:hover {
+    cursor: pointer;
+    color: #fee728;
+    text-decoration: underline;
+    transition: all 300ms ease;
+  }
+  
+  .sub-menu:hover .sub-menu-arrowDown {
+    border-left: 4px solid #fee728;
+    transition: all 300ms ease;
+  }
+  
+  .sub-menu:hover #dokdoVideo {
+    visibility: visible;
+    opacity: 1;
+    left: 155px;
+    transition: all 300ms ease;
+  } */
+
+/* #dokdoVideo > li:hover {
+    color: #41478f;
+    text-decoration: underline;
+    transition: all 300ms ease;
+  } */
+
+/* header-utils */
+#header-utils {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 3%;
+  width: 350px;
+  color: white;
+}
+
+#header-login {
+  display: flex;
+  cursor: pointer;
+}
+
+#header-login > div {
+  font-size: 14px;
+}
+
+#login-img {
+  position: relative;
+  top: -2px;
+  left: -10px;
+  /* margin-right: 5px; */
+  width: 26px;
+  height: 26px;
+  background-image: url(../../images/sp_com.png);
+  background-color: color;
+  background-repeat: no-repeat;
+  background-position-y: -41px;
+  background-position-x: -196px;
+  /* transition: background-position-y 0s ease 0.5s; */
+}
+
+#header-join {
+  display: flex;
+  cursor: pointer;
+}
+
+#header-join > div {
+  font-size: 14px;
+}
+
+#join-img {
+  position: relative;
+  top: -2px;
+  left: -10px;
+  width: 26px;
+  height: 26px;
+  background-image: url(../../images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: -41px;
+  background-position-x: -222px;
+}
+
+#header-language-now {
+  width: 120px;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.678);
+  padding: 0px 5px 5px 5px;
+  box-sizing: border-box;
+}
+
+#header-languages {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#header-language-option {
+  display: flex;
+  width: 120px;
+  /* height: 0px; */
+  font-size: 14px;
+
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  color: #444;
+
+  /* cursor: pointer; */
+}
+
+#header-language-arrow {
+  position: absolute;
+  top: 8px;
+  right: 7px;
+  border-top: 4px solid #fff;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+
+.languages {
+  color: #444;
+  transition: all 300ms;
+}
+
+.languages:hover {
+  background: #444;
+  color: #fff;
+  transition: all 300ms;
+}
+
+@media (max-width: 1580px) {
+  #header-menus {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .header-text {
+    color: black;
+  }
+
+  #header-language-now {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.678);
+  }
+  #login-img {
+    background-position-y: -67px;
+    background-position-x: -196px;
+  }
+
+  #join-img {
+    background-position-y: -67px;
+    background-position-x: -222px;
+  }
+
+  #header-language-arrow {
+    border-top: 4px solid #000;
+  }
+  #header-language-option {
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-top: 0px;
+    border-style: solid;
+    border-color: #000;
+  }
+}
