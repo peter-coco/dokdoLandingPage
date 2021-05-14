@@ -1,0 +1,323 @@
+/* container-magazine */
+
+#container-magazine {
+  width: 100%;
+  height: 525px;
+  /* background-color: chocolate; */
+  display: flex;
+}
+
+#magazine-live-wrap {
+  width: 50%;
+  height: 100%;
+  background: url("../../../images/bg_live.jpg") no-repeat 100% 0;
+  display: flex;
+  position: relative;
+}
+
+#magazine-live {
+  background: #41478f;
+  height: 100%;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 65px 33px;
+}
+
+#magazine-live-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#magazine-live-title-img {
+  width: 38px;
+  height: 50px;
+  background-image: url(../../../images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: -49px;
+  background-position-x: -0px;
+  margin-bottom: 10px;
+}
+
+#magazine-live-title-text {
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+#magazine-live-video-src {
+  width: 100%;
+  height: 100%;
+  background-color: #7d7fa2;
+}
+
+#magazine-live-subscription {
+  margin-top: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+#magazine-live-info {
+  position: absolute;
+  bottom: 0px;
+  left: 450px;
+  width: 240px;
+  box-sizing: border-box;
+  padding: 50px 33px;
+  background-color: #fff;
+}
+
+#magazine-live-info > em {
+  font-size: 23px;
+  color: #41478f;
+  font-style: normal;
+}
+
+span {
+  color: #41478f;
+}
+
+#magazine-back-wrap {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  background: url(../../../images/bg_road.gif) repeat-x 100% 100%;
+}
+
+#magazine-dokdoMagazine {
+  width: 345px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#dokdoMagazine-top {
+  height: calc(100% - 188px);
+  box-sizing: border-box;
+  padding: 50px 50px 0;
+  position: relative;
+}
+
+#dokdoMagazine-head-moreBtn {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+#dokdoMagazine-bottom {
+  position: relative;
+  height: 188px;
+  background: #d84351;
+}
+
+#dokdoMagazine-bottom-top {
+  width: 100%;
+  padding: 20px 20px 0px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+#dokdoMagazine-img {
+  position: absolute;
+  top: -170px;
+  left: 50%;
+  background: url(../../../images/dokdo_magazine.JPG) no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  box-shadow: 0 15px 15px rgb(0 0 0 / 15%);
+  width: 164px;
+  height: 219px;
+  transform: translateX(-50%);
+  z-index: 10;
+  overflow: hidden;
+}
+
+#dokdoMagazine-img::after {
+  content: "Detail View";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 60%;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: all 0.5s cubic-bezier(0, 0.4, 0.32, 0.97);
+}
+
+#dokdoMagazine-img:hover::after {
+  top: 0%;
+  transition: all 0.5s cubic-bezier(0, 0.4, 0.32, 0.97);
+}
+
+#dokdoMagazine-bottom-top-date {
+  font-size: 16px;
+  color: #fff;
+}
+
+#dokdoMagazine-bottom-top-arrow {
+  width: 28px;
+  height: 9px;
+  background: url(../../../images/sp_com.png) no-repeat -64px -30px;
+}
+
+#dokdoMagazine-bottom-title {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: -1px;
+  color: #fff;
+}
+
+#dokdoMagazine-bottom-bottom {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  width: 100%;
+  height: 50px;
+}
+
+.dokdoMagazine-bottom-bottom-Btn {
+  width: 50%;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  transition: background 300ms;
+}
+
+.dokdoMagazine-bottom-bottom-Btn:hover {
+  background: #a02d38;
+  transition: background 300ms;
+}
+
+#magazine-dokdo-load {
+  width: calc(100% - 345px);
+  box-sizing: border-box;
+  padding: 50px 0 0 50px;
+  position: relative;
+}
+
+#dokdo-load-top-head-title {
+  font-size: 23px;
+  color: #27272f;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+#dokdo-load-top-head-subscription {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5em;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  word-break: keep-all;
+}
+
+#dokdo-load-top-island-img {
+  position: absolute;
+  bottom: 175px;
+  left: 20px;
+  width: 232px;
+  height: 98px;
+  background: url(../../../images/img_road01.png) no-repeat 50% 0;
+}
+
+#dokdo-load-top-arrow-btn {
+  position: absolute;
+  top: 45%;
+  right: 0px;
+  width: 100px;
+  height: 66px;
+  background: #27272f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dokdo-load-top-arrow {
+  width: 28px;
+  height: 9px;
+  background: url(../../../images/sp_com.png) no-repeat -64px -30px;
+  transform: translateX(0px);
+  transition: all 400ms;
+}
+
+#dokdo-load-bottom-contact-title {
+  position: absolute;
+  bottom: 50px;
+  /* left: 0px; */
+  font-size: 16px;
+  color: #fff;
+}
+
+#dokdo-load-bottom-contact-number {
+  font-size: 23px;
+  color: #fff;
+  font-weight: 700;
+}
+
+#dokdo-load-top-arrow-btn:hover #dokdo-load-top-arrow {
+  transform: translateX(15px);
+  transition: all 400ms;
+}
+
+@media (max-width: 1200px) {
+  #magazine-live-wrap {
+    display: none;
+  }
+
+  #magazine-back-wrap {
+    width: 100%;
+  }
+
+  #magazine-dokdoMagazine {
+    width: 50%;
+  }
+
+  #magazine-dokdo-load {
+    width: 50%;
+  }
+}
+
+@media (max-width: 610px) {
+  #container-magazine {
+    height: 950px;
+  }
+  #magazine-back-wrap {
+    flex-direction: column;
+  }
+
+  #magazine-dokdoMagazine {
+    height: 50%;
+    width: 100%;
+  }
+
+  #dokdoMagazine-top {
+    padding: 65px 10px 0;
+  }
+
+  #dokdoMagazine-head-moreBtn {
+    top: 65px;
+    right: 10px;
+  }
+  #magazine-dokdo-load {
+    width: 100%;
+    height: 50%;
+    padding: 65px 10px 0;
+  }
+}

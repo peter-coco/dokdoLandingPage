@@ -1,0 +1,98 @@
+/* container-logo */
+
+#container-logo {
+  width: 100%;
+  height: 69px;
+  /* background-color: cornflowerblue; */
+  max-width: 1400px;
+  margin: 40px auto;
+  /* overflow: hidden; */
+  display: flex;
+}
+
+#container-logo-wrap {
+  display: flex;
+  position: relative;
+  max-width: 1370px;
+  width: 100%;
+
+  /* padding-left: 210px; */
+  /* box-sizing: border-box; */
+}
+
+#container-logo-btn {
+  position: relative;
+  top: 35%;
+  margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 40px; */
+  width: 150px;
+  height: 6px;
+}
+
+#container-logo-prev {
+  /* margin: auto; */
+  width: 32px;
+  height: 8px;
+  /* background-color: #000; */
+  background: url(../../../images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: -0px;
+  background-position-x: -244px;
+}
+
+#container-logo-play {
+  /* margin: auto; */
+  width: 8px;
+  height: 12px;
+  /* background-color: #000; */
+  background: url(../../../images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: -0px;
+  background-position-x: -290px;
+}
+
+#container-logo-pause {
+  /* margin: auto; */
+  width: 14px;
+  height: 15px;
+  /* background-color: #000; */
+  background: url(../../../images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: -0px;
+  background-position-x: -276px;
+}
+
+#container-logo-next {
+  width: 32px;
+  height: 8px;
+  background-image: url(../../../images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: -8px;
+  background-position-x: -244px;
+}
+
+#container-logo-list {
+  width: 1170px;
+  height: 69px;
+  overflow: hidden;
+}
+
+#container-logo-banner {
+  display: flex;
+  width: 1170px;
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+.banner {
+  margin-right: 15px;
+  width: 180px;
+}
+
+@media (max-width: 610px) {
+  #container-logo-btn {
+    display: none;
+  }
+}

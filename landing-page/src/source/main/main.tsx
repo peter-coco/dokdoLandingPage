@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from "react";
+import react, { useCallback, useEffect, useState } from "react";
 import "./main.css";
 
 import main_menu01 from "../../images/main_img/img_link01.svg";
@@ -19,9 +19,6 @@ export function Main({
   mainLinkToggle: boolean;
   setMainLinkToggle: Function;
 }) {
-  const [videoTitle, setVideoTitle] = useState<string>(
-    "./images/videoSample.mp4"
-  );
   const [videoOnOffToggle, setVideoOnOffToggle] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
@@ -33,6 +30,14 @@ export function Main({
     // console.log(window.innerWidth, windowWidth);
     setWindowWidth(window.innerWidth);
   });
+
+  const videoOnOffToggleFunc = useCallback(() => {
+    setVideoOnOffToggle((pre) => !pre);
+  }, [setVideoOnOffToggle]);
+
+  const mainLinkToggleFunc = useCallback(() => {
+    setMainLinkToggle((pre: boolean) => !pre);
+  }, [setMainLinkToggle]);
 
   return (
     <div id="main-wrap">
@@ -54,9 +59,7 @@ export function Main({
         <div
           className="video-OnOffBtn"
           style={videoOnOffToggle ? { display: "none" } : { display: "flex" }}
-          onClick={() => {
-            setVideoOnOffToggle((pre) => !pre);
-          }}
+          onClick={videoOnOffToggleFunc}
         >
           <div id="video-OffBtnImg"></div>
           <div className="video-OnOffBtnText">STOP</div>
@@ -64,9 +67,7 @@ export function Main({
         <div
           className="video-OnOffBtn"
           style={videoOnOffToggle ? { display: "flex" } : { display: "none" }}
-          onClick={() => {
-            setVideoOnOffToggle((pre) => !pre);
-          }}
+          onClick={videoOnOffToggleFunc}
         >
           <div id="video-OnBtnImg"></div>
           <div className="video-OnOffBtnText">START</div>
@@ -84,37 +85,28 @@ export function Main({
             : { width: "35%" }
         }
       >
-        <div
-          id="main-link-openCloseBtn"
-          onClick={() => {
-            setMainLinkToggle(!mainLinkToggle);
-          }}
-        >
+        <div id="main-link-openCloseBtn" onClick={mainLinkToggleFunc}>
           <div
             id="openCloseTop"
-            style={
-              mainLinkToggle
-                ? { transform: `rotate(35deg)` }
-                : { transform: `rotate(-35deg)` }
-            }
+            style={{
+              transform: mainLinkToggle ? "rotate(35deg)" : "rotate(-35deg)",
+            }}
           ></div>
           <div
             id="openCloseBottom"
-            style={
-              mainLinkToggle
-                ? { transform: `rotate(-35deg)` }
-                : { transform: `rotate(35deg)` }
-            }
+            style={{
+              transform: mainLinkToggle ? "rotate(-35deg)" : "rotate(35deg)",
+            }}
           ></div>
           <div
             id="openCloseText"
-            style={mainLinkToggle ? { display: "none" } : { display: "block" }}
+            style={{ display: mainLinkToggle ? "none" : "block" }}
           >
             OPEN
           </div>
           <div
             id="openCloseText"
-            style={mainLinkToggle ? { display: "block" } : { display: "none" }}
+            style={{ display: mainLinkToggle ? "block" : "none" }}
           >
             CLOSE
           </div>
@@ -201,11 +193,6 @@ export function Main({
                     transition: "all 500ms",
                   }
             }
-            // style={
-            //   mainLinkToggle
-            //     ? { display: "flex", animation: "fadeIn 2s" }
-            //     : { display: "none", animation: "fadeOut 2s" }
-            // }
           >
             <ul className="main-link-menu-top">
               <li className="main-link-menu">

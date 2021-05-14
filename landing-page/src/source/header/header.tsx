@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./header.css";
 
 export function Header({ mainLinkToggle }: { mainLinkToggle: boolean }) {
   const [languageOption, setLanguageOption] = useState<boolean>(false);
+
+  const languageOptionOnOFFFunc = useCallback(() => {
+    setLanguageOption((pre) => !pre);
+  }, [setLanguageOption]);
+
   return (
     // <img src="" alt=""/>
     <div id="header">
       <div id="header-logo"></div>
       <ul
         id="header-menus"
-        style={mainLinkToggle ? { color: "white" } : { color: "#333" }}
+        style={{
+          color: mainLinkToggle ? "white" : "#333",
+        }}
       >
         <li className="header-menu mainBusiness">
           <div>주요사업</div>
@@ -237,32 +244,18 @@ export function Header({ mainLinkToggle }: { mainLinkToggle: boolean }) {
           <div className="header-text">회원가입</div>
         </div>
         <div id="header-languages">
-          <div
-            id="header-language-now"
-            onClick={() => {
-              setLanguageOption((pre) => !pre);
-            }}
-          >
+          <div id="header-language-now" onClick={languageOptionOnOFFFunc}>
             <div className="header-text language-now">한국어</div>
             <div id="header-language-arrow"></div>
           </div>
           <div
             id="header-language-option"
-            style={
-              languageOption
-                ? {
-                    height: "150px",
-                    visibility: "visible",
-                    opacity: "1",
-                    transition: "all 300ms",
-                  }
-                : {
-                    height: "0px",
-                    visibility: "hidden",
-                    opacity: "0",
-                    transition: "all 300ms",
-                  }
-            }
+            style={{
+              height: languageOption ? "150px" : "0px",
+              visibility: languageOption ? "visible" : "hidden",
+              opacity: languageOption ? "1" : "0",
+              transition: "all 300ms",
+            }}
           >
             <div className="languages">한국어</div>
             <div className="languages">English</div>

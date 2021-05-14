@@ -1,6 +1,15 @@
+import { useCallback } from "react";
 import "./footer.css";
 
 export function Footer() {
+  const srolltoTopFunc = useCallback(() => {
+    window.scrollTo({
+      top: 0,
+      // left: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <div id="footer">
       <div id="footer-wrap">
@@ -37,16 +46,7 @@ export function Footer() {
             <div className="youtube-account"></div>
           </div>
         </div>
-        <div
-          id="footer-gotoTopBtn"
-          onClick={() => {
-            window.scrollTo({
-              top: 0,
-              // left: 0,
-              behavior: "smooth",
-            });
-          }}
-        >
+        <div id="footer-gotoTopBtn" onClick={srolltoTopFunc}>
           <div id="footer-gotoTopBtn-arrow">
             <div id="footer-gotoTopBtn-arrow-left"></div>
             <div id="footer-gotoTopBtn-arrow-right"></div>

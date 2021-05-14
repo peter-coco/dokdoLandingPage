@@ -1,0 +1,230 @@
+#container-eventScheduleNAlarmZone {
+  display: flex;
+  width: 100%;
+  height: 417px;
+  /* background-color: chartreuse; */
+  /* padding: 0px 70px 0px 70px; */
+  /* box-sizing: border-box; */
+  position: relative;
+}
+
+#eventScheduleNAlarmZone-wrap {
+  display: flex;
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+#eventSchedule {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  padding: 65px 65px 65px 0;
+  box-sizing: border-box;
+}
+
+#eventSchedule-contents {
+  display: flex;
+  width: 100%;
+}
+
+#eventScheduleNAlarmZone-tail {
+  /* display: flex; */
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: #f6f1f2;
+  z-index: -1;
+  right: 0;
+
+  /* margin-right: 70px; */
+}
+
+.eventSchedule-content {
+  /* display: flex; */
+  height: 100%;
+  border: 1px solid #e1e1e1;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-left: 35px;
+  width: 50%;
+  position: relative;
+  transition: background 300ms;
+}
+
+.eventSchedule-content-date {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+  border-right: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 18px;
+  color: #7d7fa2;
+  transition: all 300ms;
+}
+
+.eventSchedule-content-subscription {
+  position: relative;
+  margin-top: 70px;
+  left: 0px;
+  color: #333;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  transition: all 300ms;
+}
+
+.eventSchedule-content:hover {
+  background: #41478f;
+  transition: background 300ms;
+}
+
+.eventSchedule-content:hover .eventSchedule-content-date {
+  border-right: 1px solid rgb(54, 57, 80);
+  border-bottom: 1px solid rgb(54, 57, 80);
+  color: #abadd1;
+  transition: all 300ms;
+}
+
+.eventSchedule-content:hover .eventSchedule-content-subscription {
+  color: #fff;
+  transition: all 300ms;
+}
+
+/* alarmZone */
+
+#alarmZone {
+  display: flex;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  /* background: #f6f1f2; */
+  padding: 65px 0px 65px 65px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#alarmZone-head-SlideBtn {
+  display: flex;
+  position: relative;
+  top: 143px;
+  right: 100px;
+}
+
+.SlideBtn-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d84351;
+  transition: background 300ms;
+  width: 100px;
+  height: 66px;
+}
+
+.SlideBtn-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d84351;
+  transition: background 300ms;
+  width: 100px;
+  height: 66px;
+}
+
+.SlideBtn-prev-img {
+  /* margin: auto; */
+  width: 31px;
+  height: 8px;
+  /* background-color: #000; */
+  background: url(../../../images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: -23px;
+  background-position-x: -23px;
+}
+
+.SlideBtn-next-img {
+  width: 31px;
+  height: 8px;
+  background-image: url(../../../images/sp_com.png);
+  background-repeat: no-repeat;
+  background-position-y: -31px;
+  background-position-x: -24px;
+}
+
+.SlideBtn:hover {
+  background: #a02d38;
+  transition: background 300ms;
+}
+
+#alarmZone-tail-Banner-wrap {
+  position: absolute;
+  left: 200px;
+  width: 520px;
+  overflow: hidden;
+}
+
+#tail-Banner-list {
+  display: flex;
+  /* transform: translateX(-280px); */
+  width: 520px;
+  height: 285px;
+}
+
+.tail-banner {
+  margin-right: 40px;
+  float: left;
+}
+
+@media (max-width: 1025px) {
+  #container-eventScheduleNAlarmZone {
+    height: 834px;
+  }
+
+  #eventScheduleNAlarmZone-wrap {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  #eventScheduleNAlarmZone-tail {
+    display: none;
+  }
+
+  #eventSchedule,
+  #alarmZone {
+    width: 100%;
+    padding: 65px 0px 65px 10px;
+  }
+
+  #alarmZone {
+    background: #f6f1f2;
+  }
+
+  #alarmZone-head-SlideBtn {
+    right: 0;
+  }
+
+  #alarmZone-tail-Banner-wrap {
+    left: 300px;
+  }
+}
+
+@media (max-width: 610px) {
+  #eventSchedule-contents {
+    flex-direction: column;
+  }
+
+  #alarmZone-tail-Banner-wrap {
+    left: 250px;
+  }
+
+  .eventSchedule-content {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+
+  .eventSchedule-content-subscription {
+    margin-top: 40px;
+  }
+}
