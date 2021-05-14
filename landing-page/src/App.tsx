@@ -33,9 +33,6 @@ import main_menu09 from "./images/main_img/img_link09.svg";
 import main_menu10 from "./images/main_img/img_link10.svg";
 
 import "./App.css";
-// import video from "./images/videoSample.mp4";
-import { stringify } from "node:querystring";
-import { forEachChild } from "typescript";
 
 function Header({ mainLinkToggle }: { mainLinkToggle: boolean }) {
   const [languageOption, setLanguageOption] = useState<boolean>(false);
@@ -361,8 +358,8 @@ function Main({
           loop={true}
         >
           <source
-            // src="./images/videoSample.mp4"
-            src={videoTitle}
+            src="/video/videoSample.mp4"
+            // src={video1}
             type="video/mp4"
             id="video-src"
           />
@@ -584,19 +581,17 @@ function Container() {
   const [logoBannerOnOffBtn, setLogoBannerOnOffBtn] = useState<boolean>(true);
 
   let alarmZoneTimer = setTimeout(() => {
-    let temp: number = alarmZoneBannerIdx;
-    temp += 1;
-    if (temp === 6) temp = 0;
-    setAlarmZoneBannerIdx(temp);
+    setAlarmZoneBannerIdx(
+      alarmZoneBannerIdx + 1 === 6 ? 0 : alarmZoneBannerIdx + 1
+    );
     // console.log(alarmZoneBannerIdx);
   }, 3000);
 
   let logoBannerTimer = setTimeout(() => {
-    if (logoBannerOnOffBtn === false) {
+    if (!logoBannerOnOffBtn) {
       clearTimeout(logoBannerTimer);
     } else {
-      let temp: number = logoBannerIdx;
-      temp += 1;
+      let temp: number = logoBannerIdx + 1;
       if (temp === 5) temp = 0;
       setLogoBannerIdx(temp);
     }
