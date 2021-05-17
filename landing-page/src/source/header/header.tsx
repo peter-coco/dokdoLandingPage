@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 import "./header.css";
 
 export function Header({ mainLinkToggle }: { mainLinkToggle: boolean }) {
-  const [languageOption, setLanguageOption] = useState<boolean>(false);
+  const [languageOption, setLanguageOption] = useState(false);
 
   const languageOptionOnOFFFunc = useCallback(() => {
     setLanguageOption((pre) => !pre);

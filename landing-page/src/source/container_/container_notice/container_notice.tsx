@@ -13,7 +13,7 @@ export function ContainerNotice() {
   function setMainHeadContentTitle(idx: number) {
     if (noticeContentsIdx === idx) {
       return {
-        position: "relative",
+        Position: "relative",
         left: "40px",
         background: "#41478f",
         color: "white",

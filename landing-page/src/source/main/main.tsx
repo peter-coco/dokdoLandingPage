@@ -1,16 +1,16 @@
 import react, { useCallback, useEffect, useState } from "react";
 import "./main.css";
 
-import main_menu01 from "../../images/main_img/img_link01.svg";
-import main_menu03 from "../../images/main_img/img_link03.svg";
-import main_menu02 from "../../images/main_img/img_link02.svg";
-import main_menu04 from "../../images/main_img/img_link04.svg";
-import main_menu05 from "../../images/main_img/img_link05.svg";
-import main_menu06 from "../../images/main_img/img_link06.svg";
-import main_menu07 from "../../images/main_img/img_link07.svg";
-import main_menu08 from "../../images/main_img/img_link08.svg";
-import main_menu09 from "../../images/main_img/img_link09.svg";
-import main_menu10 from "../../images/main_img/img_link10.svg";
+import main_menu01 from "./main_img/img_link01.svg";
+import main_menu03 from "./main_img/img_link03.svg";
+import main_menu02 from "./main_img/img_link02.svg";
+import main_menu04 from "./main_img/img_link04.svg";
+import main_menu05 from "./main_img/img_link05.svg";
+import main_menu06 from "./main_img/img_link06.svg";
+import main_menu07 from "./main_img/img_link07.svg";
+import main_menu08 from "./main_img/img_link08.svg";
+import main_menu09 from "./main_img/img_link09.svg";
+import main_menu10 from "./main_img/img_link10.svg";
 
 export function Main({
   mainLinkToggle,
@@ -20,16 +20,10 @@ export function Main({
   setMainLinkToggle: Function;
 }) {
   const [videoOnOffToggle, setVideoOnOffToggle] = useState<boolean>(false);
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   useEffect(() => {
     console.log(window.innerWidth);
   }, [window.innerWidth]);
-
-  window.addEventListener("resize", () => {
-    // console.log(window.innerWidth, windowWidth);
-    setWindowWidth(window.innerWidth);
-  });
 
   const videoOnOffToggleFunc = useCallback(() => {
     setVideoOnOffToggle((pre) => !pre);
@@ -73,18 +67,7 @@ export function Main({
           <div className="video-OnOffBtnText">START</div>
         </div>
       </div>
-      <div
-        id="main-link"
-        style={
-          mainLinkToggle
-            ? windowWidth <= 1200
-              ? { width: "90%" }
-              : { width: "80%" }
-            : windowWidth <= 1200
-            ? { width: `${windowWidth - 79}px` }
-            : { width: "35%" }
-        }
-      >
+      <div id={mainLinkToggle ? "main-link-active" : "main-link"}>
         <div id="main-link-openCloseBtn" onClick={mainLinkToggleFunc}>
           <div
             id="openCloseTop"
@@ -114,48 +97,20 @@ export function Main({
         <div id="main-link-menu-wrap">
           <div id="main-link-menu-text">
             <div
-              className="main-link-menu-text-subscription"
-              style={
+              className={
                 mainLinkToggle
-                  ? windowWidth <= 1200
-                    ? {
-                        height: "0px",
-                        opacity: "0",
-                        transition: "all 1ms",
-                      }
-                    : {
-                        height: "0px",
-                        opacity: "0",
-                        transition: "all 1ms",
-                      }
-                  : windowWidth <= 1200
-                  ? {
-                      height: "0px",
-                      opacity: "0",
-                      transition: "all 1ms",
-                    }
-                  : {
-                      height: "100%",
-                      opacity: "1",
-                      transition: "all 4s",
-                    }
+                  ? "main-link-menu-text-subscription-active"
+                  : "main-link-menu-text-subscription"
               }
             >
               <div className="main-link-menu-text-title">독도,</div>
               한반도의 아침이 시작되는 최동단!
             </div>
             <div
-              className="main-link-menu-text-subscription"
-              style={
+              className={
                 mainLinkToggle
-                  ? {
-                      opacity: "1",
-                      transition: "all 1500ms",
-                      marginRight: "30px",
-                    }
-                  : windowWidth <= 1200
-                  ? { opacity: "1", transition: "all 4s" }
-                  : { opacity: "0", transition: "all 1ms" }
+                  ? "main-link-menu-text-subscription"
+                  : "main-link-menu-text-subscription-active"
               }
             >
               <div className="main-link-menu-text-title">독도,</div>
@@ -163,36 +118,7 @@ export function Main({
             </div>
           </div>
           <ul
-            id="main-link-menus"
-            style={
-              mainLinkToggle
-                ? windowWidth <= 1200
-                  ? {
-                      width: "700px",
-                      visibility: "visible",
-                      opacity: "1",
-                      transition: "all 1000ms",
-                    }
-                  : {
-                      width: "700px",
-                      visibility: "visible",
-                      opacity: "1",
-                      transition: "all 1000ms",
-                    }
-                : windowWidth <= 1200
-                ? {
-                    width: "700px",
-                    visibility: "visible",
-                    opacity: "1",
-                    transition: "all 1000ms",
-                  }
-                : {
-                    width: "0px",
-                    visibility: "hidden",
-                    opacity: "0",
-                    transition: "all 500ms",
-                  }
-            }
+            id={mainLinkToggle ? "main-link-menus-active" : "main-link-menus"}
           >
             <ul className="main-link-menu-top">
               <li className="main-link-menu">
