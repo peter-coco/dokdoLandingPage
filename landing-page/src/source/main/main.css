@@ -94,7 +94,7 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 80%;
+  width: calc(100% - 370px);
   transition: 1000ms;
   height: 100%;
   background-image: -webkit-linear-gradient(-40deg, #41478f 35%, #c1445a);
@@ -298,7 +298,8 @@
     left: -50px;
   }
 
-  #main-link {
+  #main-link,
+  #main-link-active {
     margin-top: 100px;
     height: 89%;
   }

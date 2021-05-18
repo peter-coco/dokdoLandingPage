@@ -1,8 +1,15 @@
 import "./sideBar.css";
 
-export function SideBar() {
+export function SideBar({
+  headerMenuBtnActivate,
+}: {
+  headerMenuBtnActivate: boolean;
+}) {
   return (
-    <div id="sideBar">
+    <div
+      id="sideBar"
+      style={{ display: headerMenuBtnActivate ? "None" : "flex" }}
+    >
       <div id="sideBar-sns">
         <div className="facebook-account"></div>
         <div className="instagram-account"></div>

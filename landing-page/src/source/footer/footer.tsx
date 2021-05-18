@@ -1,7 +1,11 @@
 import { useCallback } from "react";
 import "./footer.css";
 
-export function Footer() {
+export function Footer({
+  headerMenuBtnActivate,
+}: {
+  headerMenuBtnActivate: boolean;
+}) {
   const srolltoTopFunc = useCallback(() => {
     window.scrollTo({
       top: 0,
@@ -11,7 +15,10 @@ export function Footer() {
   }, []);
 
   return (
-    <div id="footer">
+    <div
+      id="footer"
+      style={{ display: headerMenuBtnActivate ? "None" : "block" }}
+    >
       <div id="footer-wrap">
         <div id="footer-top-link">
           <div className="footer-top-link-list-active">개인정보처리방침</div>

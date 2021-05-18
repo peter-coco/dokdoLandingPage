@@ -15,15 +15,13 @@ import main_menu10 from "./main_img/img_link10.svg";
 export function Main({
   mainLinkToggle,
   setMainLinkToggle,
+  headerMenuBtnActivate,
 }: {
   mainLinkToggle: boolean;
   setMainLinkToggle: Function;
+  headerMenuBtnActivate: boolean;
 }) {
   const [videoOnOffToggle, setVideoOnOffToggle] = useState<boolean>(false);
-
-  useEffect(() => {
-    console.log(window.innerWidth);
-  }, [window.innerWidth]);
 
   const videoOnOffToggleFunc = useCallback(() => {
     setVideoOnOffToggle((pre) => !pre);
@@ -34,7 +32,10 @@ export function Main({
   }, [setMainLinkToggle]);
 
   return (
-    <div id="main-wrap">
+    <div
+      id="main-wrap"
+      style={{ display: headerMenuBtnActivate ? "None" : "block" }}
+    >
       <div id="main-video">
         <video
           id="main-video-src"
