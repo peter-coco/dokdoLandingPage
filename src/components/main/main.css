@@ -62,20 +62,26 @@
 
 #main-picture-dokdo {
   position: absolute;
-  top: 573px;
+  /* top: 573px; */
+  bottom: 0px;
   right: 0px;
-  width: 1452px;
-  height: 364px;
+  /* width: 1452px; */
+  width: 80vw;
+  height: 40vh;
+  /* height: 50vh; */
   background: url(../../images/img_dokdo.png);
+  background-size: 80vw 40vh;
 }
 
 #main-picture-cloud {
   position: absolute;
   top: 50px;
-  right: 80px;
-  width: 557px;
+  right: 10%;
+  /* width: 557px; */
+  width: 20vw;
   height: 231px;
   background: url(../../images/img_cloud.png);
+  background-size: 20vw 231px;
   /* background-color: #41478f; */
 }
 
@@ -388,11 +394,12 @@
     flex-direction: column;
     width: 70%;
     height: 80%;
-    top: 20%;
+    top: 10%;
   }
 
   #main-link-menus,
   #main-link-menus-active {
+    flex-wrap: wrap;
     top: 20px;
     left: -20px;
   }

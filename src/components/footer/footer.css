@@ -166,3 +166,31 @@
     gap: 0px;
   }
 }
+
+@media (max-width: 630px) {
+  #footer-gotoTopBtn {
+    width: 70px;
+    height: 70px;
+    padding-top: 40px;
+  }
+
+  #footer-gotoTopBtn-arrow {
+    position: absolute;
+    top: 20px;
+    left: 27px;
+    transition: top 500ms;
+  }
+  /* #footer-gotoTopBtn-text {
+    bottom: 30px;
+  } */
+
+  #footer {
+    height: 100%;
+  }
+
+  #footer-sns {
+    position: relative;
+    margin-top: 15px;
+    bottom: 0;
+  }
+}

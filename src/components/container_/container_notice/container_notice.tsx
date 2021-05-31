@@ -1,26 +1,20 @@
-import { useCallback, useState } from "react";
+import { CSSProperties, useCallback, useState } from "react";
 import "./container_notice.css";
 
 export function ContainerNotice() {
   const [noticeContentsIdx, setNoticeContentsIdx] = useState<number>(0);
-  const noticeContentsIdxFunc = useCallback(
-    (idx: number) => () => {
-      setNoticeContentsIdx(idx);
-    },
-    [setNoticeContentsIdx]
-  );
-
-  function setMainHeadContentTitle(idx: number) {
-    if (noticeContentsIdx === idx) {
-      return {
-        Position: "relative",
-        left: "40px",
-        background: "#41478f",
-        color: "white",
-        transition: "all 300ms ease",
-      };
-    }
-  }
+  const setMainHeadContentTitle: (idx: number) => CSSProperties = (
+    idx: number
+  ) =>
+    noticeContentsIdx === idx
+      ? {
+          position: "relative",
+          left: "40px",
+          background: "#41478f",
+          color: "white",
+          transition: "all 300ms ease",
+        }
+      : {};
 
   function setMainContent(idx: number) {
     if (noticeContentsIdx === idx) {
@@ -56,21 +50,21 @@ export function ContainerNotice() {
           <div id="notice-head-contents-title">
             <div
               className="head-content-title"
-              onClick={noticeContentsIdxFunc(0)}
+              onClick={() => setNoticeContentsIdx(0)}
               style={setMainHeadContentTitle(0)}
             >
               공지사항
             </div>
             <div
               className="head-content-title"
-              onClick={noticeContentsIdxFunc(1)}
+              onClick={() => setNoticeContentsIdx(1)}
               style={setMainHeadContentTitle(1)}
             >
               언론 & 홍보
             </div>
             <div
               className="head-content-title"
-              onClick={noticeContentsIdxFunc(2)}
+              onClick={() => setNoticeContentsIdx(2)}
               style={setMainHeadContentTitle(2)}
             >
               보도자료

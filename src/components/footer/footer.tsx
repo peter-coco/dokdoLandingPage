@@ -27,18 +27,6 @@ export function Footer({
           <div className="footer-top-link-list">홈페이지불편신고</div>
           <div className="footer-top-link-list">사이트맵</div>
         </div>
-        <div id="footer-bottom">
-          <div id="footer-bottom-top-infor">
-            <div>우) 37751 경상북도 포항시 북구 중흥로 231 동양빌딩 9층</div>
-            <div>이메일 : dokdo@koreadokdo.or.kr</div>
-            <div>대표번호 : 054-272-6513</div>
-            <div>팩스번호 : 054-272-6515</div>
-          </div>
-          <div id="footer-bottom-bottom-rightInfor">
-            COPYRIGHT 2019. BY 재단법인 독도재단. ALL RIGHTS RESERVED. Design by
-            KOWEB.
-          </div>
-        </div>
         <div id="footer-sns">
           <div className="sns-wrap">
             <div className="facebook-account"></div>
@@ -53,6 +41,19 @@ export function Footer({
             <div className="youtube-account"></div>
           </div>
         </div>
+        <div id="footer-bottom">
+          <div id="footer-bottom-top-infor">
+            <div>우) 37751 경상북도 포항시 북구 중흥로 231 동양빌딩 9층</div>
+            <div>이메일 : dokdo@koreadokdo.or.kr</div>
+            <div>대표번호 : 054-272-6513</div>
+            <div>팩스번호 : 054-272-6515</div>
+          </div>
+          <div id="footer-bottom-bottom-rightInfor">
+            COPYRIGHT 2019. BY 재단법인 독도재단. ALL RIGHTS RESERVED. Design by
+            KOWEB.
+          </div>
+        </div>
+
         <div id="footer-gotoTopBtn" onClick={srolltoTopFunc}>
           <div id="footer-gotoTopBtn-arrow">
             <div id="footer-gotoTopBtn-arrow-left"></div>

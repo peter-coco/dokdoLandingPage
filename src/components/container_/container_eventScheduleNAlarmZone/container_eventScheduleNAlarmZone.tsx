@@ -61,65 +61,63 @@ export function ContainerEventScheduleNAlarmZone() {
           </div>
         </div>
         <div id="alarmZone">
-          <div id="alarmZone-head">
-            <div id="alarmZone-head-introduce">
-              <div className="head-English-bar"></div>
-              <div className="head-English-Text">Banner</div>
-              <div className="head-Title">알림존</div>
-              <div id="alarmZone-head-SlideBtn">
-                <div
-                  className="SlideBtn SlideBtn-prev"
-                  onClick={() => {
-                    setAlarmZoneBannerIdx((pre) =>
-                      pre - 1 === -1 ? 5 : pre - 1
-                    );
-                  }}
-                >
-                  <div className="SlideBtn-prev-img"></div>
-                </div>
-                <div
-                  className="SlideBtn SlideBtn-next"
-                  onClick={() => {
-                    setAlarmZoneBannerIdx((pre) =>
-                      pre + 1 === 6 ? 0 : pre + 1
-                    );
-                  }}
-                >
-                  <div className="SlideBtn-next-img"></div>
-                </div>
+          <div id="alarmZone-wrap">
+            <div id="alarmZone-head">
+              <div id="alarmZone-head-introduce">
+                <div className="head-English-bar"></div>
+                <div className="head-English-Text">Banner</div>
+                <div className="head-Title">알림존</div>
               </div>
             </div>
+            <div id="alarmZone-tail-Banner-wrap">
+              <ul
+                id="tail-Banner-list"
+                style={{
+                  transition: "1000ms",
+                  transform: `translate(${alarmZoneBannerIdx * -260}px)`,
+                }}
+              >
+                <li className="tail-banner">
+                  <img src={alarm_banner01} alt="" />
+                </li>
+                <li className="tail-banner">
+                  <img src={alarm_banner02} alt="" />
+                </li>
+                <li className="tail-banner">
+                  <img src={alarm_banner03} alt="" />
+                </li>
+                <li className="tail-banner">
+                  <img src={alarm_banner04} alt="" />
+                </li>
+                <li className="tail-banner">
+                  <img src={alarm_banner05} alt="" />
+                </li>
+                <li className="tail-banner">
+                  <img src={alarm_banner06} alt="" />
+                </li>
+                <li className="tail-banner">
+                  <img src={alarm_banner07} alt="" />
+                </li>
+              </ul>
+            </div>
           </div>
-          <div id="alarmZone-tail-Banner-wrap">
-            <ul
-              id="tail-Banner-list"
-              style={{
-                transition: "1000ms",
-                transform: `translate(${alarmZoneBannerIdx * -280}px)`,
+          <div id="alarmZone-head-SlideBtn">
+            <div
+              className="SlideBtn SlideBtn-prev"
+              onClick={() => {
+                setAlarmZoneBannerIdx((pre) => (pre - 1 === -1 ? 5 : pre - 1));
               }}
             >
-              <li className="tail-banner">
-                <img src={alarm_banner01} alt="" />
-              </li>
-              <li className="tail-banner">
-                <img src={alarm_banner02} alt="" />
-              </li>
-              <li className="tail-banner">
-                <img src={alarm_banner03} alt="" />
-              </li>
-              <li className="tail-banner">
-                <img src={alarm_banner04} alt="" />
-              </li>
-              <li className="tail-banner">
-                <img src={alarm_banner05} alt="" />
-              </li>
-              <li className="tail-banner">
-                <img src={alarm_banner06} alt="" />
-              </li>
-              <li className="tail-banner">
-                <img src={alarm_banner07} alt="" />
-              </li>
-            </ul>
+              <div className="SlideBtn-prev-img"></div>
+            </div>
+            <div
+              className="SlideBtn SlideBtn-next"
+              onClick={() => {
+                setAlarmZoneBannerIdx((pre) => (pre + 1 === 6 ? 0 : pre + 1));
+              }}
+            >
+              <div className="SlideBtn-next-img"></div>
+            </div>
           </div>
         </div>
       </div>

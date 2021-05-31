@@ -320,4 +320,27 @@ span {
     height: 50%;
     padding: 65px 10px 0;
   }
+
+  #dokdoMagazine-img {
+    top: -120px;
+    /* width: 164px; */
+    /* height: 219px; */
+    width: 130px;
+    height: 180px;
+  }
+
+  /* #dokdoMagazine-img {
+    position: absolute;
+    top: -170px;
+    left: 50%;
+    background: url(../../../images/dokdo_magazine.JPG) no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    box-shadow: 0 15px 15px rgb(0 0 0 / 15%);
+    width: 164px;
+    height: 219px;
+    transform: translateX(-50%);
+    z-index: 10;
+    overflow: hidden;
+  } */
 }

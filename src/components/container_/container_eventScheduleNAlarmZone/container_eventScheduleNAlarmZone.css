@@ -105,11 +105,18 @@
   overflow: hidden;
 }
 
+#alarmZone-wrap {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
 #alarmZone-head-SlideBtn {
   display: flex;
-  position: relative;
-  top: 143px;
-  right: 100px;
+  position: absolute;
+  top: 285px;
+  left: -50px;
 }
 
 .SlideBtn-prev {
@@ -160,19 +167,19 @@
 #alarmZone-tail-Banner-wrap {
   position: absolute;
   left: 200px;
-  width: 520px;
+  width: 500px;
   overflow: hidden;
 }
 
 #tail-Banner-list {
   display: flex;
   /* transform: translateX(-280px); */
-  width: 520px;
+  width: 500px;
   height: 285px;
 }
 
 .tail-banner {
-  margin-right: 40px;
+  margin-right: 20px;
   float: left;
 }
 

@@ -9,7 +9,15 @@ export function ContainerMagazine() {
             <div id="magazine-live-title-img"></div>
             <div id="magazine-live-title-text">Dokdo Live</div>
           </div>
-          <div id="magazine-live-video-src"></div>
+          <div id="magazine-live-video-src">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/Q0jiCQ4ceCs?autoplay=1&mute=1"
+              title="YouTube video player"
+              frameBorder="0"
+            ></iframe>
+          </div>
           <div id="magazine-live-subscription">
             여기는 독도입니다.
             <br /> 작은 관심이 독도사랑의 첫 걸음 입니다.
