@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio_dokdoLanding/static/css/main.c119e377.chunk.css",
-    "main.js": "/portfolio_dokdoLanding/static/js/main.b3445494.chunk.js",
-    "main.js.map": "/portfolio_dokdoLanding/static/js/main.b3445494.chunk.js.map",
+    "main.js": "/portfolio_dokdoLanding/static/js/main.13742d4e.chunk.js",
+    "main.js.map": "/portfolio_dokdoLanding/static/js/main.13742d4e.chunk.js.map",
     "runtime-main.js": "/portfolio_dokdoLanding/static/js/runtime-main.69e57a4c.js",
     "runtime-main.js.map": "/portfolio_dokdoLanding/static/js/runtime-main.69e57a4c.js.map",
     "static/js/2.d1ecc411.chunk.js": "/portfolio_dokdoLanding/static/js/2.d1ecc411.chunk.js",
@@ -40,6 +40,6 @@
     "static/js/runtime-main.69e57a4c.js",
     "static/js/2.d1ecc411.chunk.js",
     "static/css/main.c119e377.chunk.css",
-    "static/js/main.b3445494.chunk.js"
+    "static/js/main.13742d4e.chunk.js"
   ]
 }
