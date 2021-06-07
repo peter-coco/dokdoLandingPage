@@ -9,7 +9,7 @@ export function ContainerNotice() {
     noticeContentsIdx === idx
       ? {
           position: "relative",
-          left: "40px",
+          left: "30px",
           background: "#41478f",
           color: "white",
           transition: "all 300ms ease",

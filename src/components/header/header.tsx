@@ -263,7 +263,9 @@ export function Header({
         </li>
       </ul>
       <div id="header-utils">
-        <div id="header-login">
+        <div
+          id={headerMenuBtnActivate ? "header-login-active" : "header-login"}
+        >
           <div
             id={headerMenuBtnActivate ? "join-img-active" : "join-img"}
           ></div>
@@ -275,7 +277,7 @@ export function Header({
             로그인
           </div>
         </div>
-        <div id="header-join">
+        <div id={headerMenuBtnActivate ? "header-join-active" : "header-join"}>
           <div
             id={headerMenuBtnActivate ? "login-img-active" : "login-img"}
           ></div>
@@ -287,7 +289,13 @@ export function Header({
             회원가입
           </div>
         </div>
-        <div id="header-languages">
+        <div
+          id={
+            headerMenuBtnActivate
+              ? "header-languages-active"
+              : "header-languages"
+          }
+        >
           <div
             id={
               headerMenuBtnActivate

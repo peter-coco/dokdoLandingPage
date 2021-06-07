@@ -33,10 +33,10 @@ export function ContainerEventScheduleNAlarmZone() {
                 <br />
                 많은 관심 바랍니다.
               </div>
-              <div id="eventSchedule-head-moreBtn">
-                <div className="moreBtn-horizontal "></div>
-                <div className="moreBtn-vertical"></div>
-              </div>
+            </div>
+            <div id="eventSchedule-head-moreBtn">
+              <div className="moreBtn-horizontal "></div>
+              <div className="moreBtn-vertical"></div>
             </div>
           </div>
           <div id="eventSchedule-contents">

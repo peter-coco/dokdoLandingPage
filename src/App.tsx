@@ -18,7 +18,7 @@ function App() {
     function resizeEventFunc() {
       if (
         window.innerWidth >
-        1580 /*&& !headerMenuBtnActivate addEventListener가 시작되면서 얘는 고정이 되버림*/
+        1580 /*&& !headerMenuBtnActivate addEventListener가 시작되면서 얘는 고정이 되버림ggg*/
       ) {
         setHeaderMenuBtnActivate(false);
       }

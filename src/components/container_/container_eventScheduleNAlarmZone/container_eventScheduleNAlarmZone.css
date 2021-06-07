@@ -100,9 +100,9 @@
   width: 50%;
   height: 100%;
   /* background: #f6f1f2; */
-  padding: 65px 0px 65px 65px;
+  padding: 65px 0px 65px 50px;
   box-sizing: border-box;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #alarmZone-wrap {
@@ -164,10 +164,15 @@
   transition: background 300ms;
 }
 
+#alarmZone-head {
+  width: 100px;
+}
+
 #alarmZone-tail-Banner-wrap {
-  position: absolute;
-  left: 200px;
-  width: 500px;
+  position: relative;
+  left: 30px;
+  /* width: 500px; */
+  width: 100%;
   overflow: hidden;
 }
 
@@ -183,9 +188,9 @@
   float: left;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1200px) {
   #container-eventScheduleNAlarmZone {
-    height: 834px;
+    height: 1000px;
   }
 
   #eventScheduleNAlarmZone-wrap {
@@ -208,11 +213,11 @@
   }
 
   #alarmZone-head-SlideBtn {
-    right: 0;
+    left: 10px;
   }
 
   #alarmZone-tail-Banner-wrap {
-    left: 300px;
+    left: 150px;
   }
 }
 
@@ -222,7 +227,7 @@
   }
 
   #alarmZone-tail-Banner-wrap {
-    left: 250px;
+    left: 100px;
   }
 
   .eventSchedule-content {
@@ -233,5 +238,57 @@
 
   .eventSchedule-content-subscription {
     margin-top: 40px;
+  }
+
+  .SlideBtn-prev,
+  .SlideBtn-next {
+    width: 80px;
+  }
+}
+
+@media (max-width: 400px) {
+  #eventSchedule {
+    flex-direction: column;
+    padding: 30px 15px 30px 15px;
+    box-sizing: border-box;
+  }
+
+  #eventSchedule-head-introduce > .haed-Subscrition {
+    display: none;
+  }
+
+  #eventSchedule-head {
+    position: relative;
+  }
+
+  #eventSchedule-head-moreBtn {
+    position: absolute;
+    right: 0;
+    top: -50px;
+    /* margin-top: 30px; */
+  }
+
+  #eventSchedule-head-introduce {
+    margin-bottom: 20px;
+  }
+
+  #eventSchedule-contents {
+    height: 100%;
+  }
+
+  #alarmZone-wrap {
+    flex-direction: column;
+  }
+
+  #alarmZone-tail-Banner-wrap {
+    left: 0px;
+    top: 30px;
+  }
+
+  #alarmZone-head-SlideBtn {
+    top: 60px;
+    /* right: 0; */
+    left: 45%;
+    /* right: 50px; */
   }
 }
