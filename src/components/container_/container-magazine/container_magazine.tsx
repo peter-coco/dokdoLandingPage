@@ -13,7 +13,7 @@ export function ContainerMagazine() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/Q0jiCQ4ceCs?autoplay=1&mute=1"
+              src="https://www.youtube.com/embed/Q0jiCQ4ceCs?amp;autoplay=1&;playlist=Q0jiCQ4ceCs&loop=1&mute=1"
               title="YouTube video player"
               frameBorder="0"
             ></iframe>
