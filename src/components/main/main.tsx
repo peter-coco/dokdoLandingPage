@@ -43,7 +43,12 @@ export function Main({
   return (
     <div
       id="main-wrap"
-      style={{ display: headerMenuBtnActivate ? "None" : "block" }}
+      style={{
+        height: headerMenuBtnActivate ? "400px" : "937px",
+        opacity: headerMenuBtnActivate ? "0" : "1",
+        visibility: headerMenuBtnActivate ? "hidden" : "visible",
+        transition: headerMenuBtnActivate ? "all 3000ms" : "all 700ms",
+      }}
     >
       <div id="main-video">
         <iframe

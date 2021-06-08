@@ -32,10 +32,15 @@ function App() {
   return (
     <div id="app-wrap">
       <SideBar headerMenuBtnActivate={headerMenuBtnActivate} />
-      <Header
+      {/* <Header
         mainLinkToggle={mainLinkToggle}
         setHeaderMenuBtnActivate={setHeaderMenuBtnActivate}
         headerMenuBtnActivate={headerMenuBtnActivate}
+      /> */}
+      <HeaderActive
+        mainLinkToggle={mainLinkToggle}
+        headerMenuBtnActivate={headerMenuBtnActivate}
+        setHeaderMenuBtnActivate={setHeaderMenuBtnActivate}
       />
       <Main
         mainLinkToggle={mainLinkToggle}
@@ -44,11 +49,6 @@ function App() {
       />
       <Container headerMenuBtnActivate={headerMenuBtnActivate} />
       <Footer headerMenuBtnActivate={headerMenuBtnActivate} />
-      <HeaderActive
-        mainLinkToggle={mainLinkToggle}
-        headerMenuBtnActivate={headerMenuBtnActivate}
-        setHeaderMenuBtnActivate={setHeaderMenuBtnActivate}
-      />
     </div>
   );
 }

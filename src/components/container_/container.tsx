@@ -13,7 +13,7 @@ export function Container({
   return (
     <div
       id="container-wrap"
-      style={{ display: headerMenuBtnActivate ? "none" : "block" }}
+      style={{ display: headerMenuBtnActivate ? "None" : "block" }}
     >
       <ContainerNotice />
       <ContainerEventScheduleNAlarmZone />
