@@ -1,4 +1,4 @@
-import react, { useCallback, useEffect, useState } from "react";
+import react, { useCallback, useRef, useState } from "react";
 import "./main.css";
 
 import main_menu01 from "./main_img/img_link01.svg";
@@ -31,14 +31,19 @@ export function Main({
   headerMenuBtnActivate: boolean;
 }) {
   const [videoOnOffToggle, setVideoOnOffToggle] = useState(false);
-
+  const vidRef = useRef();
   const videoOnOffToggleFunc = useCallback(() => {
+    // vidRef.current.pause();
     setVideoOnOffToggle((pre) => !pre);
   }, [setVideoOnOffToggle]);
 
   const mainLinkToggleFunc = useCallback(() => {
     setMainLinkToggle((pre: boolean) => !pre);
   }, [setMainLinkToggle]);
+
+  // const handlePlayVideo = () => {
+  //   vidRef.current.pause();
+  // };
 
   return (
     <div
@@ -55,7 +60,7 @@ export function Main({
           id="main-video-src"
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/muB4_LNZ2Rk?autoplay=1&mute=1"
+          src="https://www.youtube.com/embed/muB4_LNZ2Rk?amp;autoplay=1&;playlist=muB4_LNZ2Rk&loop=1&mute=1"
           title="YouTube video player"
           frameBorder="0"
         ></iframe>
