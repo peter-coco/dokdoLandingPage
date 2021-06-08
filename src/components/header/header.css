@@ -619,12 +619,6 @@ button {
   #header {
     padding: 20px 0 0 0;
   }
-}
-
-@media (max-width: 450px) {
-  #header {
-    padding: 20px 0 0 0;
-  }
 
   #header-languages,
   #header-languages-active {
