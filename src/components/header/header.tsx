@@ -1,11 +1,5 @@
 import { useCallback, useState } from "react";
 import "./header.css";
-import { MainBusinessActive } from "./mainBusinessActive";
-import { DataActive } from "./datasActive";
-import { BoardActive } from "./boardActive";
-import { IntroduceActive } from "./introduceActive";
-import { DokdoStateActive } from "./dokdoStateActive";
-import { KdokdoActive } from "./KdokdoActive";
 
 export function Header({
   mainLinkToggle,
@@ -28,14 +22,12 @@ export function Header({
 
   return (
     // <img src="" alt=""/>
-    <div id="header">
-      <div
-        id={headerMenuBtnActivate ? "header-logo-active" : "header-logo"}
-      ></div>
-      <button
-        id={headerMenuBtnActivate ? "header-menuBtn-active" : "header-menuBtn"}
-        onClick={headerMenuBtnActivateFunc}
-      >
+    <div
+      id="header"
+      style={{ display: headerMenuBtnActivate ? "None" : "block" }}
+    >
+      <div id="header-logo"></div>
+      <button id="header-menuBtn" onClick={headerMenuBtnActivateFunc}>
         <i></i>
         <i></i>
         <i></i>
@@ -337,29 +329,6 @@ export function Header({
             <div className="languages">日本語</div>
             <div className="languages">中文</div>
           </div>
-        </div>
-      </div>
-      <div
-        id="header-menus-active-wrap"
-        style={{
-          height: headerMenuBtnActivate ? "100%" : "0px",
-          opacity: headerMenuBtnActivate ? "1" : "0",
-          visibility: headerMenuBtnActivate ? "visible" : "hidden",
-          transition: "all 700ms",
-        }}
-      >
-        <div
-          id="header-menus-active"
-          style={{
-            color: mainLinkToggle ? "white" : "#333",
-          }}
-        >
-          <MainBusinessActive />
-          <DataActive />
-          <BoardActive />
-          <IntroduceActive />
-          <DokdoStateActive />
-          <KdokdoActive />
         </div>
       </div>
     </div>

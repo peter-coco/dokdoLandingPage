@@ -5,6 +5,7 @@ import { SideBar } from "./components/sideBar/sideBar";
 import { Main } from "./components/main/main";
 import { Container } from "./components/container_/container";
 import { Footer } from "./components/footer/footer";
+import { HeaderActive } from "./components/header_active/headerActive";
 
 import logo from "./logo.svg";
 
@@ -43,6 +44,11 @@ function App() {
       />
       <Container headerMenuBtnActivate={headerMenuBtnActivate} />
       <Footer headerMenuBtnActivate={headerMenuBtnActivate} />
+      <HeaderActive
+        mainLinkToggle={mainLinkToggle}
+        headerMenuBtnActivate={headerMenuBtnActivate}
+        setHeaderMenuBtnActivate={setHeaderMenuBtnActivate}
+      />
     </div>
   );
 }
