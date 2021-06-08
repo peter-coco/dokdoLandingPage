@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 
-import { Header } from "./components/header/header";
 import { SideBar } from "./components/sideBar/sideBar";
 import { Main } from "./components/main/main";
 import { Container } from "./components/container_/container";
 import { Footer } from "./components/footer/footer";
-import { HeaderActive } from "./components/header_active/headerActive";
+import { Header } from "./components/header/header";
 
 import logo from "./logo.svg";
 
@@ -32,12 +31,7 @@ function App() {
   return (
     <div id="app-wrap">
       <SideBar headerMenuBtnActivate={headerMenuBtnActivate} />
-      {/* <Header
-        mainLinkToggle={mainLinkToggle}
-        setHeaderMenuBtnActivate={setHeaderMenuBtnActivate}
-        headerMenuBtnActivate={headerMenuBtnActivate}
-      /> */}
-      <HeaderActive
+      <Header
         mainLinkToggle={mainLinkToggle}
         headerMenuBtnActivate={headerMenuBtnActivate}
         setHeaderMenuBtnActivate={setHeaderMenuBtnActivate}
