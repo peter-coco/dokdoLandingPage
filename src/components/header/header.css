@@ -28,7 +28,7 @@
   /* flex: 1; */
 }
 
-#header-logo-active {
+/* #header-logo-active {
   position: absolute;
   left: 70px;
   background: url(../../images/logo_w.svg) no-repeat 50% 0;
@@ -36,8 +36,8 @@
   height: 80px;
   width: 190px;
   z-index: 90;
-  /* flex: 1; */
-}
+} 
+*/
 
 button {
   border: 0;
