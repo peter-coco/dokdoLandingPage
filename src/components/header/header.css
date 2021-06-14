@@ -294,7 +294,8 @@ button {
   cursor: pointer;
 }
 
-#header-login > div {
+.header-text-active
+.header-text{
   font-size: 14px;
 }
 
@@ -320,9 +321,9 @@ button {
   cursor: pointer;
 }
 
-#header-join > div {
+/* #header-join > div {
   font-size: 14px;
-}
+} */
 
 #join-img,
 #join-img-active {
