@@ -1,5 +1,8 @@
 import "./container_magazine.css";
 
+import ReactPlayer from 'react-player'
+
+
 export function ContainerMagazine() {
   return (
     <div id="container-magazine">
@@ -10,13 +13,15 @@ export function ContainerMagazine() {
             <div id="magazine-live-title-text">Dokdo Live</div>
           </div>
           <div id="magazine-live-video-src">
-            <iframe
+            {/* <iframe
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/Q0jiCQ4ceCs?amp;autoplay=1&;playlist=Q0jiCQ4ceCs&loop=1&mute=1"
               title="YouTube video player"
               frameBorder="0"
-            ></iframe>
+            ></iframe> */}
+            <ReactPlayer id = "main-video-src" playing width = "100%" height = "100%" url='https://www.youtube.com/embed/Q0jiCQ4ceCs?' 
+         muted loop controls/>
           </div>
           <div id="magazine-live-subscription">
             여기는 독도입니다.
